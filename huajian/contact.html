@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>华健医药科技-联系我们</title>
+	<link href="css/format.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="http://webapi.amap.com/maps?v=1.3&key=8325164e247e15eea68b59e89200988b"></script>
+</head>
+<body>
+<div class="header w100">
+	<div class="w1200 mc cb">
+    	<a href="index.html" class="logo fL dpB" title="华健医药科技"></a>
+    
+    	<div class="language fR">
+        	<span class="fL ui"></span>
+            <b>语言：<a href="">English</a>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="cYellow">中文</span></b>
+        </div><!--language end-->
+    	
+        <div class="nav fR">
+        	<a href="index.html" >首页</a>
+        	<a href="product.html" >产品</a>
+        	<a href="support.html">支持</a>
+        	<a href="about.html" >关于华健</a>
+        	<a href="employ.html" class="cur">联系我们</a>
+        </div><!--nav end-->
+    </div>
+</div><!--header end-->
+
+<div class="kv-sub w100">
+    <div class="kvPic"><img src="image/kv_sub2.png"/></div>
+</div><!--kv end-->
+
+<div class="main cb w1200 mc mt40">
+	<div class="fL sidebar">
+		<h2 class="sidebar-title">联系我们</h2>
+		<ul class="nav-list"> 
+			<li>
+				<a href="employ.html" class="cb">
+					<span class="menu-text fL">人才招聘</span>
+					<b class="arrow fR">+</b>
+				</a>
+			</li>
+			<li class="active">
+				<a href="contact.html" class="cb">
+					<span class="menu-text fL">联系我们</span>
+					<b class="arrow fR">+</b>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="fR container">
+		<div class="content contact">
+			<h3>华健医药科技(常州）有限公司</h3>
+			<p class="address">地址：常州市新北区太湖东路9号4幢203室 </p>
+			<div class="contactBox">
+				<ul class="cb taC">
+					<li class="email fL">
+						<div class="ico-email"></div>
+						<div>邮箱：service@healthwear-tech.com</div>
+					</li>
+					<li class="phone fL">
+						<div class="ico-tel"></div>
+						<div>电话：0519-69813298</div>
+					</li>
+					<li class="fax fL">
+						<div class="ico-fax"></div>
+						<div>传真：0519-69813289</div>
+					</li>
+					<li class="QQ fL">
+						<div class="ico-qq"></div>
+						<div>QQ：2016381809</div>
+					</li>
+				</ul>
+			</div>
+			 <div id="wrap" class="my-map">
+		        <div id="mapContainer"></div>
+		    </div>
+		</div>
+	</div>
+</div>
+<div class="footer w100">
+	<div class="w1200 mc cb">
+		<div class="contactus fL">
+        	<img src="image/erwei.jpg" class="fL" width="99" height="121" />
+            <div class="fL">
+            	<label class="search"><input type="text" name="" value="" class="text" /><input type="submit" value="搜索" class="submit" /></label>
+                <p class="tel"><span class="fL ui"></span>客服热线：</p>
+                <h4>400-863-0676</h4>
+            </div>
+        </div><!--contactus end-->   
+    
+    	<div class="menus fR">
+        	<ul class="cb">
+				<li class="first"><a href="product.html"><h6>产品</h6></a><a href="product.html">智能体温监测管理</a><a href="">心血管健康管理</a><a href="">睡眠健康管理</a><a href="">家庭健康管理</a></li>
+            	<li><a href="support.html"><h6>支持</h6></a><a href="support.html">技术支持</a><a href="QA.html">Q&amp;A</a></li>
+            	<li><a href="about.html"><h6>关于华健</h6></a><a href="about.html">了解华健</a><a href="newsList.html">新闻热点</a></li>
+            	<li><a href="employ.html"><h6>联系我们</h6></a><a href="employ.html">人才招聘</a><a href="contact.html">联系我们</a></li>
+            </ul>
+			
+        	
+            <p class="copyright">Copyright&copy;2015 华健医药科技版权所有.   All Rights Reserved    苏ICP备01234567号</p>
+        </div><!--menus end-->
+    </div>
+</div><!--footer end-->
+</body>
+   <script>
+    !function(){
+        var infoWindow, map, level = 17,
+            center = {lng: 119.992425, lat: 31.811775},
+            features = [{type: "Marker", name: "华健医药科技(常州）有限公司", desc: "地址：常州市新北区太湖东路9号4幢203室", color: "red", icon: "cir", offset: {x: -9, y: -31}, lnglat: {lng: 119.992365, lat: 31.81168}}];
+ 
+        function loadFeatures(){
+            for(var feature, data, i = 0, len = features.length, j, jl, path; i < len; i++){
+                data = features[i];
+                switch(data.type){
+                    case "Marker":
+                        feature = new AMap.Marker({ map: map, position: new AMap.LngLat(data.lnglat.lng, data.lnglat.lat),
+                            zIndex: 3, extData: data, offset: new AMap.Pixel(data.offset.x, data.offset.y), title: data.name,
+                            content: '<div class="icon icon-' + data.icon + ' icon-'+ data.icon +'-' + data.color +'"></div>' });
+                        break;
+                    case "Polyline":
+                        for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
+                            path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+                        }
+                        feature = new AMap.Polyline({ map: map, path: path, extData: data, zIndex: 2,
+                            strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity });
+                        break;
+                    case "Polygon":
+                        for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
+                            path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+                        }
+                        feature = new AMap.Polygon({ map: map, path: path, extData: data, zIndex: 1,
+                            strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity,
+                            fillColor: data.fillColor, fillOpacity: data.fillOpacity });
+                        break;
+                    default: feature = null;
+                }
+                if(feature){ AMap.event.addListener(feature, "click", mapFeatureClick); }
+            }
+        }
+ 
+        function mapFeatureClick(e){
+            if(!infoWindow){ infoWindow = new AMap.InfoWindow({autoMove: true}); }
+            var extData = e.target.getExtData();
+            infoWindow.setContent("<h5>" + extData.name + "</h5><div>" + extData.desc + "</div>");
+            infoWindow.open(map, e.lnglat);
+        }
+ 
+        map = new AMap.Map("mapContainer", {center: new AMap.LngLat(center.lng, center.lat), level: level});
+         
+        loadFeatures();
+ 
+        map.on('complete', function(){
+            map.plugin(["AMap.ToolBar"], function(){
+                map.addControl(new AMap.ToolBar);
+            });
+        })
+         
+    }();
+    </script>
+</html>
