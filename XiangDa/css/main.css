@@ -1,0 +1,497 @@
+/* ======================================================================
+ * @description 湘达物流官网css文件
+ * @author Raiyen
+ * @time 20160316
+ * ======================================================================
+ */
+/*public*/
+.width-main{
+	width:1000px;
+	}
+.mt90{
+	margin-top: 90px;
+	}
+.img-responsive{
+	display: block;
+    max-width: 100%;
+    height: auto;
+}
+.bc-bg{
+	background-color: #ed6c00;
+	}
+.width-main hr{
+	height:1px;
+	border:none;
+	border-top:1px solid #ddd;
+}
+/*=============首页========*/
+/*header*/
+.head .top{
+	height: 46px;
+	line-height: 46px;
+	background-color: #ed6c00;
+	color: #fbf9d1;
+	font-size: 16px;
+}
+.head .top .top-right{
+	background-color: #4c4b4b;
+	}
+.head .top .top-right a{
+	display: inline-block;
+	padding:0 40px;
+	line-height: 46px;
+	color: #fff;
+}
+.head .top .top-right a:hover{
+	color: #ffe29c;
+}
+.head .top .top-right a[active]{color: #ffe29c;}
+.head .top .top-right span{
+	display: inline-block;
+	width: 2px;
+	height: 32px;
+	vertical-align: middle;
+	background-color: #ffe29c;
+}
+.head .nav{
+	height: 96px;
+	line-height: 96px;
+}
+.head .nav a{
+	display: inline-block;
+	padding: 0 26px;
+	color: #333;
+	font-size: 14px;
+	position: relative;
+}
+.head .nav a .arrow-down{
+	position: absolute;
+	border: 6px solid transparent;
+	border-right: 8px solid #ed6c00;
+	right: 46px;
+	top: 70px;
+	transform:rotate(-90deg);
+	display: none;
+}
+.head .nav a:hover{color: #ed6c00;}
+.head .nav a[active]{color: #ed6c00;}
+.head .nav a[active] .arrow-down{display: block;}
+/*banner*/
+.banner{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	}
+	.banner .swiper-pagination-bullet-active{background: #FFFFFF;}
+/*service*/
+.serviceList a{
+	display: block;
+	height: 200px;
+	width: 220px;
+	color: #999;
+	font-size: 16px;
+	margin-left: 40px;
+	float: left;
+}
+	.serviceList a:first-child{margin-left: 0;}
+.serviceList a [class^=ico-]{
+	width: 108px;
+	height: 108px;
+}
+.ico-fwds{background-image: url(../image/fuwudianshang.png);}
+.serviceList a:hover .ico-fwds{background-image: url(../image/fuwudianshang1.png);}
+.ico-gxyy{background-image: url(../image/gaoxiaoyunying.png);}
+.serviceList a:hover  .ico-gxyy{background-image: url(../image/gaoxiaoyunying1.png);}
+.ico-bzfw{background-image: url(../image/biaozhunfuwu.png);}
+.serviceList a:hover  .ico-bzfw{background-image: url(../image/biaozhunfuwu1.png);}
+.ico-xtzc{background-image: url(../image/xitongzhichi.png);}
+.serviceList a:hover  .ico-xtzc{background-image: url(../image/xitongzhichi1.png);}
+.serviceList a .serviceName{padding: 15px 0;}
+.serviceList a .describe{font-size: 14px;line-height: 1.4;}
+/*业务范围*/
+.business{
+	margin-top: 64px;
+	}
+.business .title{
+	width: 1000px;
+	height: 32px;
+	background-image: url(../image/line.png);
+	margin-bottom: 40px;
+}
+.business .title h2{
+	font-size: 30px;
+	line-height: 32px;
+	color: #aaa;
+	margin: 0;
+	font-weight: 500;
+}
+.business .detailbox .adv{
+	width: 224px;
+	height: 248px;
+	background-color: #ed6c00;
+}
+.business .detailbox .adv .adv-img{
+	width: 138px;
+	height: 184px;
+	background-image: url(../image/indexadv.png);
+	margin-top: 26px;
+	box-shadow: 3px 2px 8px rgba(0,0,0,.4);
+}
+.business .detailbox .adv .adv-title{
+	font-size: 16px;
+	margin-top: 10px;
+	color: #FFFFFF;
+	}
+.business .detailbox .detail{
+	width: 270px;
+	height: 248px;
+	margin-left:6px;
+	background-color: #ed6c00;
+	color: #FFFFFF;
+	padding: 0 30px;
+	position: relative;
+	display: block;
+}
+.business .detailbox .detail h3{
+	font-size: 20px;
+	margin-top: 26px;
+	font-weight: 600;
+}
+.business .detailbox .detail>div{
+	font-size: 14px;
+	margin-top: 22px;
+	line-height: 1.3;
+}
+.business .detailbox .detail .arrow{
+	position: absolute;
+	border: 16px solid transparent;
+	border-right: 18px solid #ed6c00;
+	right: -34px;
+	top: 20px;
+	transform:rotate(-180deg);
+}
+.business .detailbox .more{
+	padding-left: 80px;
+	padding-right: 40px;
+	width: 500px;
+	height: 248px;
+}
+.business .detailbox .more h3{
+	font-size: 18px;
+	color: #666;
+	font-weight: 600;
+	line-height: 1.4;
+	margin: 36px 0;
+}
+.business .detailbox .more hr{
+	height:1px;
+	border:none;
+	border-top:1px solid #ddd;
+}
+.business .detailbox .more a.linkmore{
+	color: #ed6c00;
+	font-size: 14px;
+	margin-top: 40px;
+	display: block;
+}
+.footer{
+	background-color: #efeff0;
+	border-top: 1px solid #ddd;
+	padding-top: 40px;
+	color: #999;
+	font-size: 16px;
+	padding-bottom: 50px;
+	}
+.footer .partnersName{
+		margin-left: 30px;
+		width: 880px;
+	}
+.footer .partnersName>li{
+	display: inline-block;
+	margin-right: 44px;
+	margin-bottom: 20px;
+	
+}
+.footer .partnersBox>*{
+	display: inline-block;
+	vertical-align: middle;
+	}
+.partnersBox .arrow-left{width: 10px;height: 18px;background-image: url(../image/arrowleft.png);cursor: pointer;}
+.partnersBox .arrow-right{width: 10px;height: 18px;background-image: url(../image/arrowright.png);cursor: pointer;}
+.partnersBox .partners{width: 900px;height: 35px;margin:0 10px;position: relative;overflow: hidden;}
+.partnersBox .partners ul{position: absolute;left: 0;top: 0;width: 1400px;}
+.partnersBox .partners li{float: left;margin-right: 20px;border: 1px dashed #ddd;width: 80px;}
+/*===========服务电商=======*/
+.intro{
+	background-color: #ed6c00;
+	padding: 40px 100px 30px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 2;
+	}
+.intro .title{
+	color: #FFFFFF;
+	font-size: 20px;
+	text-shadow: 3px 2px 8px rgba(0,0,0,.4);
+	margin-bottom: 10px;
+	}
+.intro .title span{
+	font-weight: 600;
+	}
+.intro p{
+	margin: 0;
+	}
+.logoBox{
+	background-color: #e6e6e6;
+	padding: 40px 100px;
+	margin-top: 50px;
+	}
+.logoBox .title{
+	color: #ed6c00; 
+	font-size: 20px;
+	font-weight: 700;
+	}
+.logoBox .tip{
+	font-size: 14px;
+	color: #777;
+	line-height: 3;
+	}
+.logoBox .LogoImg{
+	width: 796px;
+	background-image: url(../image/picbox.png);
+	border: 1px solid #9d9d9d;
+	height: 272px;
+	}
+.serviceMap{
+	border: 1px solid #ccc;
+	height: 600px;
+	margin-top: 50px;
+	}
+.serviceMap img{
+	display: block;
+	margin-top: 50px;
+}
+/*=============标准服务==================*/
+.slogan{
+	margin: 50px auto;
+	}
+.slogan h2{
+	font-size: 26px;
+	color: #ed6c00;
+	}
+.column{width: 800px;}
+.column li{
+	float: left;
+	width: 200px;
+	font-size: 14px;
+	color: #333;
+	border-left: 1px solid #a0a0a0;
+	padding: 0 20px 40px;
+	line-height: 1.4;
+	}
+	.column li:first-child{border: none;}
+.column li [class^=ico-]{
+	margin: 50px auto 30px;
+	height: 68px;
+	}
+.ico-service1{background-image: url(../image/shezhizhuanye.png);width: 98px;}
+.ico-service2{background-image: url(../image/gongtongjujiao.png);width: 75px;}
+.ico-service3{background-image: url(../image/vip.png);width: 69px;}
+.ico-service4{background-image: url(../image/zhiliangbaobiao.png);width: 57px;}
+.slogan2{
+	font-size: 36px;
+	color: #ed6c00;
+	margin-top: 120px;
+	margin-bottom: 40px;
+	}
+.slogandetail{
+	font-size: 14px;
+	line-height: 1.4;
+	width: 460px;
+	}
+.service-shown{
+	width: 691px;
+	position: relative;
+	height: 487px;
+	margin-top: 60px;
+	background-image: url(../image/xiangmuwuyou.png);
+	margin-bottom: 80px;
+	}
+.service-shown [class^=shown]{font-size: 14px;line-height: 1.4;color: #333;}
+	.shown1{position: absolute;left: 0;top: 70px;}
+	.shown2{position: absolute;left: 50px;bottom: 60px;}
+	.shown3{position: absolute;right: 0;top: 150px;}
+.solution{margin-top: 80px;}
+.solution h2{
+	font-size: 28px;
+	color: #ed6c00;
+	margin: 0;
+	}
+.solution .solutionImg{
+	width: 990px;
+	height: 471px;
+	background-image: url(../image/solution.png);
+	}
+.solution h3{
+	font-size: 20px;
+	color: #555;
+	}
+/*=============系统支持==================*/
+.supportBox .support{margin-top: 50px;}
+.supportBox h2{
+	color: #ed6c00;
+	font-size: 28px;
+	font-weight: normal;
+	margin: 40px auto 0;
+}
+.supportBox h3{
+	font-size: 16px;
+	color: #333;
+	font-weight: normal;
+	margin: 20px 0;
+}
+.supportBox .support li [class^=ico-]{
+	height: 74px;
+	margin: 40px auto 30px;
+}
+.ico-support1{background-image: url(../image/support1.png);width: 79px;}
+.ico-support2{background-image: url(../image/support2.png);width: 80px;}
+.ico-support3{background-image: url(../image/support3.png);width: 88px;}
+.ico-support4{background-image: url(../image/support4.png);width: 58px;}
+.ico-support5{background-image: url(../image/support5.png);width: 74px;}
+.supportBox .support li{
+	color: #333;
+	font-size: 12px;
+	line-height: 1.4;
+	width: 200px;
+	padding: 0 20px 60px;
+	border-left: 1px solid #aaa;
+}
+.supportBox .support li:first-child{border: none;}
+.system h2{
+	color: #ed6c00;
+	font-size: 28px;
+	font-weight: normal;
+	margin: 60px auto;
+}
+.system-column{width: 840px;}
+.system .system-column [class^=ico-]{
+	width: 160px;
+	height: 93px;
+	margin-bottom: 30px;
+}
+.ico-system1{background-image:url(../image/dianshang.png) ;}
+.ico-system2{background-image: url(../image/pingtai.png);}
+.ico-system3{background-image:url(../image/shangjia.png) ;}
+.ico-system4{background-image: url(../image/skskkss.png);}
+.system .system-column li{
+	width: 180px;
+	margin-left: 40px;
+	color: #666;
+	font-size: 14px;
+	line-height: 1.4;
+}
+.system .system-column li:first-child{margin-left: 0;}
+.system .describe{
+	padding: 0 14px;
+}
+/*why us*/
+.why-us h2{
+	color: #ed6c00;
+	font-size: 28px;
+	font-weight: normal;
+	margin: 50px auto 10px;
+}
+.why-us h3{
+	font-size: 16px;
+	color: #333;
+	font-weight: normal;
+	margin: 0;
+}
+.why-us .row{
+	width: 828px;
+	margin-top: 70px;
+}
+.why-us .row li{
+	margin-left: 20px;
+}
+.why-us .row li:first-child{margin-left: 0;}
+.why-us .row li [class^=ico-]{
+	border: 1px solid #a9a9a9;
+	width: 192px;
+	height: 128px;
+}
+.why-us .row li:hover [class^=ico-]{
+	border: 1px solid #ed6c00;
+}
+.ico-row1{background-image: url(../image/zhongduohangyeshijian.png);}
+.ico-row2{background-image: url(../image/zhinengguanli.png);}
+.ico-row3{background-image: url(../image/jingyihuaguanli.png);}
+.ico-row4{background-image: url(../image/zhuanyerucangtuandui.png);}
+.why-us .row .title{
+	font-size: 14px;
+	margin-top: 16px;
+	color: #333;
+	text-align: center;
+}
+/*服务*/
+.business-service h2{
+	color: #ed6c00;
+	font-size: 28px;
+	font-weight: normal;
+	margin: 50px auto 10px;
+}
+.business-service h3{
+	font-size: 16px;
+	color: #333;
+	font-weight: normal;
+	margin: 0;
+}
+.business-service .tip{
+	font-size: 14px;
+	margin: 60px 0 100px;
+}
+.servicebox [class^=ico-]{
+	height: 36px;
+	margin-bottom: 10px;
+}
+.ico-dcrk{background-image: url(../image/ico-dcrk.png);width:38px ;}
+.ico-xmsj{background-image: url(../image/ico-xmsj.png);width:38px ;}
+.ico-jjfa{background-image: url(../image/ico-jjfa.png);width:27px ;}
+.ico-rkgl{background-image: url(../image/ico-rkgl.png);width:50px ;}
+.ico-zkgl{background-image: url(../image/ico-zkgl.png);width:34px ;}
+.ico-ddsc{background-image: url(../image/ico-ddsc.png);width:32px ;}
+.servicebox>ul>li{margin-right: 56px;width: 110px;}
+.servicebox .detail li{
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 12px;
+}
+.servicebox .detail li:first-child{
+	color: #ed6c00;
+	margin: 20px 0;
+}
+/*==============联系我们========*/
+.contact h2{color: #ed6c00;font-size: 28px;}
+.contact h3{font-size: 16px;color: #333;}
+.tel,.address{font-size: 16px;color: #333;}
+.tel span,.address span{color: #333;display: inline-block;margin-right: 20px;}
+.address{margin-top: 20px;}
+.map{margin-top: 80px;}
+.my-map { margin: 0 auto; width: 1000px; height: 500px; }
+.my-map .icon { background: url(http://lbs.amap.com/console/public/show/marker.png) no-repeat; }
+.my-map .icon-cir { height: 31px; width: 28px; }
+.my-map .icon-cir-red { background-position: -11px -5px; }
+/*===========关于我们==================*/
+/*公司简介*/
+.company-profile h2{color: #ed6e08;font-size: 28px;margin-bottom: 0;}
+.company-profile h3{font-size: 14px;color: #111;margin-bottom: 30px;font-weight: normal;}
+.company-profile p{text-indent: 28px;font-size: 14px;color: #555;line-height: 20px;}
+/*荣誉资质*/
+.honor h2{color: #ed6e08;font-size: 28px;margin-top: 60px;margin-bottom: 0;}
+.honor h3{font-size: 14px;color: #111;margin-bottom: 30px;font-weight: normal;}
+.honor .certificate .certificate-top img{display: block;width: 477px;height: 300px;}
+.honor .certificate .certificate-bottom{margin-top: 10px;}
+.honor .certificate .certificate-bottom .fL img{display: block;width: 631px;height: 349px;}
+.honor .certificate .certificate-bottom .fR img{display: block;width: 287px;height: 388px;}
