@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见问题</title>
+    <link rel="stylesheet" href="css/format.css" media="screen">
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <script src="js/jquery_min.js"></script>
+    <script src="js/jquery.svg.min.js"></script>
+    <script>
+    $(function(){
+        $(".top .topbox .close ").click(function(){
+            $(this).parents(".top").animate({ opacity: 'hide' }, "slow");
+        });
+          	
+    });
+        function scroll_news(obj){
+$(obj).find("ul:first").animate({marginTop:"-40px"},500,function(){
+                $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+        });
+}
+
+        setInterval('scroll_news("#scroll")',4000);
+
+    </script>
+
+</head>
+<body>
+    <div class="top">
+       <div class="topbox ofH" >
+            <img src="image/radio.png" alt="新闻"  class="topradio">
+            <img src="image/close.png" alt="关闭" class="close">
+            <div id="scroll">
+                <ul>
+                    <li>
+                        <a href="#" style="color:#333">
+                        无锡超级计算中心荣获无锡超级计算中心荣获 
+                        <strong>2015-07-13</strong><span>了解详情 </span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:#333">
+                        无锡超级计算中心荣获无锡超级计算中心荣获
+                        <strong>2015-07-13</strong><span>了解详情 2</span> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>                      
+    </div>
+    <div class="title cb">
+        <div class="logo fL"></div>
+        <div class="slogan fL">
+            <div class="slUP">面向广大中小企业提供弹性计算服务！</div>
+            <div class="slD">服务电话：123-456-78</div>
+        </div>
+        <span class="titleR fR">
+            <div class="language">
+                <a href="">EN</a>/
+                <a href="">中文</a>
+            </div>
+            <div class="vpn">
+                VPN登陆：
+                <a href="" class="dx"><img src="image/dianxin.png" alt="">  电信</a>
+                <a href="" class="lt"><img src="image/liantong.png" alt=""> 联通</a>
+                <a href="" class="yd"><img src="image/yidong.png" alt=""> 移动</a>
+            </div>
+        </span>
+    </div>
+    <div class="navbox">
+        <ul class="nav taC">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="introduction.html">中心概况</a>
+            <div class="dropdown dropdown1 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">基础设施</a>
+                  <a href="" class="taC fR">中心风采</a>  
+            </div></li>
+            <li><a href="news.html">新闻公告</a>
+            <div class="dropdown dropdown2 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">中心新闻</a>
+                  <a href="" class="taC fR">业界动态</a>
+                  <a href="" class="taC fR">公示公告</a>    
+            </div></li>
+            <li><a href="software.html">中心资源</a>
+            <div class="dropdown dropdown3 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">硬件资源</a>
+                  <a href="" class="taC fR">软件资源</a>  
+            </div></li>
+            <li><a href="">中心业务</a>
+            <div class="dropdown dropdown4 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">高性能计算</a>
+                  <a href="" class="taC fR">云计算</a>
+                  <a href="" class="taC fR">动漫渲染</a>
+                  <a href="" class="taC fR">IDC托管</a>    
+            </div></li>
+            <li><a href="process.html">上机指南</a>
+            <div class="dropdown dropdown5 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">上机流程</a>
+                  <a href="" class="taC fR">常见问题</a>  
+            </div></li>
+            <li><a href="">案列分析</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="employ.html">诚聘英才</a></li>
+        </ul>   
+    </div>
+    <!--nav end-->
+    <div class="nlBox cb">
+        <h2 class="fL nlName">常见问题</h2>
+        <span class="fR">当前位置：首页 >上机指南 > <strong>常见问题</strong></span>
+    </div>
+    <div class="newscontainer cb">
+        <div class="pageleft fL">
+            <a href="" class="newsl cb">   
+                <div class="newsLBox fL">
+                    <h3>什么是超级计算机？</h3>
+                    <p class="newscontent">
+                        2015年8月6日，国家超级计算天津中心主任助理冯景华一行2人赴我中心访问交流，在参观超级计算机主辅机设备之后，我中心主任及各部门代表与冯助理一行分别举行座谈。 座谈会上，我中心主任及各部门代表应 ...
+                    </p>
+                    <button href="" class="newsM taC">了解详情</button>
+                </div>
+            </a>
+            <a href="" class="newsl cb">
+                <div class="newsLBox fL">
+                    <h3>国际超级计算计上海中心赴我中心交流</h3>
+                    <p class="newscontent">
+                        2015年8月6日，国家超级计算天津中心主任助理冯景华一行2人赴我中心访问交流，在参观超级计算机主辅机设备之后，我中心主任及各部门代表与冯助理一行分别举行座谈。 座谈会上，我中心主任及各部门代表应 ...
+                    </p>
+                    <button href="" class="newsM taC">了解详情</button>
+                </div>
+            </a>
+            <a href="" class="newsl cb">
+                <div class="newsLBox fL">
+                    <h3>国际超级计算计上海中心赴我中心交流</h3>
+                    <p class="newscontent">
+                        2015年8月6日，国家超级计算天津中心主任助理冯景华一行2人赴我中心访问交流，在参观超级计算机主辅机设备之后，我中心主任及各部门代表与冯助理一行分别举行座谈。 座谈会上，我中心主任及各部门代表应 ...
+                    </p>
+                    <button href="" class="newsM taC">了解详情</button>
+                </div>
+            </a>
+            <a href="" class="newsl cb">
+                <div class="newsLBox fL">
+                    <h3>国际超级计算计上海中心赴我中心交流</h3>
+                    <p class="newscontent">
+                        2015年8月6日，国家超级计算天津中心主任助理冯景华一行2人赴我中心访问交流，在参观超级计算机主辅机设备之后，我中心主任及各部门代表与冯助理一行分别举行座谈。 座谈会上，我中心主任及各部门代表应 ...
+                    </p>
+                    <button href="" class="newsM taC">了解详情</button>
+                </div>
+            </a>
+            <a href="" class="newsl cb">
+                <div class="newsLBox fL">
+                    <h3>国际超级计算计上海中心赴我中心交流</h3>
+                    <p class="newscontent">
+                        2015年8月6日，国家超级计算天津中心主任助理冯景华一行2人赴我中心访问交流，在参观超级计算机主辅机设备之后，我中心主任及各部门代表与冯助理一行分别举行座谈。 座谈会上，我中心主任及各部门代表应 ...
+                    </p>
+                    <button href="" class="newsM taC">了解详情</button>
+                </div>
+            </a>
+            <div class="pagelist taL">
+                    <a href="" class="disabled">首页</a>
+                    <a href="">&lt;</a>
+                    <a href="" class="currentpage">1</a>
+                    <a href="">2</a>
+                    <a href="">...</a>
+                    <a href="">6</a>
+                    <a href="">&gt;</a>                                 
+            </div>
+            
+        </div>
+        <div class="pageright fR">
+            <dl class="sidenav">
+                <dt><a href="">中心新闻</a></dt>
+                <dt><a href="">业界动态</a></dt>
+                <dt><a href="">公示公告</a></dt>
+                    <dd><a href="">招标告示</a></dd>
+                    <dd><a href="">人员任免</a></dd>
+            </dl>
+            <div class="contactBG taC">
+                <a href=""><img src="image/contact.png" alt="">联系我们</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footerBG">
+        <div class="footerbox cb">
+            
+            <div class="footer fL ">
+                <div class="footerNav taR">
+                    <a href="">首页</a>
+                    <a href="">中心概况</a>
+                    <a href="">新闻公告</a>
+                    <a href="">中心资源</a>
+                    <a href="">中心业务</a>
+                    <a href="">上机指南</a>
+                    <a href="">案列分析</a>
+                    <a href="">联系我们</a>
+                    <a href="" class="lasta">诚聘英才</a>
+                </div>
+                   
+                <div class="addressbox  taR">
+                    <span>地址: 江苏省无锡市蠡园经济开发区滴翠路100号B楼2层<br>电话: 0510-85162179(技术支持部)、0510-85162150(工程计算部)<br>版权所有 @ 无锡超级计算中心  备号123456789-1</span>
+                </div>
+                <div class=" weibo taR">
+                    <a href=""><img src="image/sina.png" alt=""></a>
+                    <a href=""><img src="image/tecentweibo.png" alt=""></a>
+                    <span>扫二维码，了解更多 !</span>
+                </div>
+            </div>
+           <div class="erweima fR"><a href=""></a></div>
+        </div>
+    </div>
+</body>
+</html>

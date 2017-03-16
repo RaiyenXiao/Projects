@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>诚聘英才</title>
+    <link rel="stylesheet" href="css/format.css" media="screen">
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <script src="js/jquery_min.js"></script>
+    <script src="js/jquery.svg.min.js"></script>
+    <script>
+    $(function(){
+        $(".top .topbox .close ").click(function(){
+            $(this).parents(".top").animate({ opacity: 'hide' }, "slow");
+        });
+        
+        
+        $(".employdetails:eq(0)").show();
+        $(".employBox .employ").click(function(){           $(this).parent().parent().find(".employcurrent").removeClass("employcurrent").next(".employdetails").slideUp('slow');
+            $(this).addClass("employcurrent");
+            $(this).next(".employdetails").slideDown(500);
+        });
+    });
+        function scroll_news(obj){
+$(obj).find("ul:first").animate({marginTop:"-40px"},500,function(){
+                $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+        });
+}
+
+        setInterval('scroll_news("#scroll")',4000);
+    </script>
+</head>
+<body>
+    <div class="top">
+       <div class="topbox ofH" >
+            <img src="image/radio.png" alt="新闻"  class="topradio">
+            <img src="image/close.png" alt="关闭" class="close">
+            <div id="scroll">
+                <ul>
+                    <li>
+                        <a href="#" style="color:#333">
+                        无锡超级计算中心荣获无锡超级计算中心荣获 
+                        <strong>2015-07-13</strong><span>了解详情 </span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:#333">
+                        无锡超级计算中心荣获无锡超级计算中心荣获
+                        <strong>2015-07-13</strong><span>了解详情 2</span> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>                      
+    </div>
+    <div class="title cb">
+        <div class="logo fL"></div>
+        <div class="slogan fL">
+            <div class="slUP">面向广大中小企业提供弹性计算服务！</div>
+            <div class="slD">服务电话：123-456-78</div>
+        </div>
+        <span class="titleR fR">
+            <div class="language">
+                <a href="">EN</a>/
+                <a href="">中文</a>
+            </div>
+            <div class="vpn">
+                VPN登陆：
+                <a href="" class="dx"><img src="image/dianxin.png" alt="">  电信</a>
+                <a href="" class="lt"><img src="image/liantong.png" alt=""> 联通</a>
+                <a href="" class="yd"><img src="image/yidong.png" alt=""> 移动</a>
+            </div>
+        </span>
+    </div>
+    <div class="navbox">
+        <ul class="nav taC">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="introduction.html">中心概况</a>
+            <div class="dropdown dropdown1 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">基础设施</a>
+                  <a href="" class="taC fR">中心风采</a>  
+            </div></li>
+            <li><a href="news.html">新闻公告</a>
+            <div class="dropdown dropdown2 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">中心新闻</a>
+                  <a href="" class="taC fR">业界动态</a>
+                  <a href="" class="taC fR">公示公告</a>    
+            </div></li>
+            <li><a href="software.html">中心资源</a>
+            <div class="dropdown dropdown3 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">硬件资源</a>
+                  <a href="" class="taC fR">软件资源</a>  
+            </div></li>
+            <li><a href="">中心业务</a>
+            <div class="dropdown dropdown4 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">高性能计算</a>
+                  <a href="" class="taC fR">云计算</a>
+                  <a href="" class="taC fR">动漫渲染</a>
+                  <a href="" class="taC fR">IDC托管</a>    
+            </div></li>
+            <li><a href="process.html">上机指南</a>
+            <div class="dropdown dropdown5 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">上机流程</a>
+                  <a href="" class="taC fR">常见问题</a>  
+            </div></li>
+            <li><a href="">案列分析</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="employ.html">诚聘英才</a></li>
+        </ul>   
+    </div>
+    <!--nav end-->
+    <div class="nlBox cb">
+        <h2 class="fL nlName">诚聘英才</h2>
+        <span class="fR">当前位置：首页 > <strong>诚聘英才</strong></span>
+    </div>
+    <div class="newscontainer cb">
+        <div class="pageleft fL">
+            <div class="adv">
+                <img src="image/employ.png" alt="">
+            </div>
+            <div class="employBox">
+                <div class="employ employcurrent">网络运维助理工程师</div>
+                <div class="employdetails">
+                    <div class="qualifications">
+                       <h4>任职资格：</h4>
+                       <p>
+                           1.学历要求： 硕士及以上<br>2.专业： 网络工程、软件工程、计算机相关专业<br>3.经验要求 3年以上工作经验，1年以上网络运维工作经验<br>4.知识要求 具备网络设备、安全设备、服务器和存储设备知识；熟悉网络、存储和应用业务架构，具有网络架构的规划能力。<br>5.技能要求 具有互联网企业或IT企业网络系统、网络安全体系的架构规划、设计、实施、维护经验；精通IP路由及交换技术，熟悉各类网络产品（交换机、路由器、防火墙等）的配置与管理；熟悉网管
+                       </p>
+                    </div>
+                    <div class="description">
+                       <h4>岗位描述：</h4>
+                       <p>
+                           1.外网链接管理：运营商链路接入，链路质量检测，IP地址规划申请。<br>
+                           2.专线管理：党政网、用户专线、VPN、IPsecVPN接入管理，用户项目跟踪。<br>
+                           3.备案管理：协助解决中心ISP资质，备案。<br>
+                           4.项目管理：负责网络机房扩容升级项目管理。<br>
+                           5.业务受理：负责中心其他部门业务请求，包括VPN、外网IP地址、代理上网、流量控制等；业务测试，用户反馈，用户故障排查等。<br>
+                           6.网络管理：负责网络架构规划和设计，调整和维护网络架构。<br>
+                           7.网络安全设备管理：日常巡检，简单故障处理，配置备份和iSOC系统管理。<br>
+                           8.配置管理：负责网络设备一般的上线配置、变更配置等。<br>
+                           9.机房管理：负责本部门机房安全管理工作，机房运行情况监控、设备维护等；处理和上报机房安全事件；参与制定并落实中心机房安全管理制度。 <br>
+
+                       </p>
+                    </div>
+                    <button hret="" class="apply taC">申请职位</button>
+                </div>
+            </div> 
+            <div class="employBox">
+                <div class="employ">网络运维助理工程师</div>
+                <div class="employdetails">
+                    <div class="qualifications">
+                       <h4>任职资格：</h4>
+                       <p>
+                           1.学历要求： 硕士及以上<br>2.专业： 网络工程、软件工程、计算机相关专业<br>3.经验要求 3年以上工作经验，1年以上网络运维工作经验<br>4.知识要求 具备网络设备、安全设备、服务器和存储设备知识；熟悉网络、存储和应用业务架构，具有网络架构的规划能力。<br>5.技能要求 具有互联网企业或IT企业网络系统、网络安全体系的架构规划、设计、实施、维护经验；精通IP路由及交换技术，熟悉各类网络产品（交换机、路由器、防火墙等）的配置与管理；熟悉网管
+                       </p>
+                    </div>
+                    <div class="description">
+                       <h4>岗位描述：</h4>
+                       <p>
+                           1.外网链接管理：运营商链路接入，链路质量检测，IP地址规划申请。<br>
+                           2.专线管理：党政网、用户专线、VPN、IPsecVPN接入管理，用户项目跟踪。<br>
+                           3.备案管理：协助解决中心ISP资质，备案。<br>
+                           4.项目管理：负责网络机房扩容升级项目管理。<br>
+                           5.业务受理：负责中心其他部门业务请求，包括VPN、外网IP地址、代理上网、流量控制等；业务测试，用户反馈，用户故障排查等。<br>
+                           6.网络管理：负责网络架构规划和设计，调整和维护网络架构。<br>
+                           7.网络安全设备管理：日常巡检，简单故障处理，配置备份和iSOC系统管理。<br>
+                           8.配置管理：负责网络设备一般的上线配置、变更配置等。<br>
+                           9.机房管理：负责本部门机房安全管理工作，机房运行情况监控、设备维护等；处理和上报机房安全事件；参与制定并落实中心机房安全管理制度。 <br>
+
+                       </p>
+                    </div>
+                    <button hret="" class="apply taC">申请职位</button>
+                </div>
+            </div>       
+            <div class="employBox">
+                <div class="employ">网络运维助理工程师</div>
+                <div class="employdetails">
+                    <div class="qualifications">
+                       <h4>任职资格：</h4>
+                       <p>
+                           1.学历要求： 硕士及以上<br>2.专业： 网络工程、软件工程、计算机相关专业<br>3.经验要求 3年以上工作经验，1年以上网络运维工作经验<br>4.知识要求 具备网络设备、安全设备、服务器和存储设备知识；熟悉网络、存储和应用业务架构，具有网络架构的规划能力。<br>5.技能要求 具有互联网企业或IT企业网络系统、网络安全体系的架构规划、设计、实施、维护经验；精通IP路由及交换技术，熟悉各类网络产品（交换机、路由器、防火墙等）的配置与管理；熟悉网管
+                       </p>
+                    </div>
+                    <div class="description">
+                       <h4>岗位描述：</h4>
+                       <p>
+                           1.外网链接管理：运营商链路接入，链路质量检测，IP地址规划申请。<br>
+                           2.专线管理：党政网、用户专线、VPN、IPsecVPN接入管理，用户项目跟踪。<br>
+                           3.备案管理：协助解决中心ISP资质，备案。<br>
+                           4.项目管理：负责网络机房扩容升级项目管理。<br>
+                           5.业务受理：负责中心其他部门业务请求，包括VPN、外网IP地址、代理上网、流量控制等；业务测试，用户反馈，用户故障排查等。<br>
+                           6.网络管理：负责网络架构规划和设计，调整和维护网络架构。<br>
+                           7.网络安全设备管理：日常巡检，简单故障处理，配置备份和iSOC系统管理。<br>
+                           8.配置管理：负责网络设备一般的上线配置、变更配置等。<br>
+                           9.机房管理：负责本部门机房安全管理工作，机房运行情况监控、设备维护等；处理和上报机房安全事件；参与制定并落实中心机房安全管理制度。 <br>
+
+                       </p>
+                    </div>
+                    <button hret="" class="apply taC">申请职位</button>
+                </div>
+            </div>                 
+        </div>
+        <div class="pageright fR">
+            <dl class="sidenav">
+                <dt><a href="">基础设施</a></dt>
+                    <dd><a href="">中心介绍</a></dd>
+                    <dd><a href="">组织架构</a></dd>
+                    <dd><a href="">荣誉资质</a></dd>
+                <dt><a href="">中心风采</a></dt>
+                <dt><a href="">诚聘英才</a></dt>
+                    
+            </dl>
+            <div class="contactBG taC">
+                <a href=""><img src="image/contact.png" alt="">联系我们</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footerBG">
+        <div class="footerbox cb">
+            
+            <div class="footer fL ">
+                <div class="footerNav taR">
+                    <a href="">首页</a>
+                    <a href="">中心概况</a>
+                    <a href="">新闻公告</a>
+                    <a href="">中心资源</a>
+                    <a href="">中心业务</a>
+                    <a href="">上机指南</a>
+                    <a href="">案列分析</a>
+                    <a href="">联系我们</a>
+                    <a href="" class="lasta">诚聘英才</a>
+                </div>
+                   
+                <div class="addressbox  taR">
+                    <span>地址: 江苏省无锡市蠡园经济开发区滴翠路100号B楼2层<br>电话: 0510-85162179(技术支持部)、0510-85162150(工程计算部)<br>版权所有 @ 无锡超级计算中心  备号123456789-1</span>
+                </div>
+                <div class=" weibo taR">
+                    <a href=""><img src="image/sina.png" alt=""></a>
+                    <a href=""><img src="image/tecentweibo.png" alt=""></a>
+                    <span>扫二维码，了解更多 !</span>
+                </div>
+            </div>
+           <div class="erweima fR"><a href=""></a></div>
+        </div>
+    </div>
+</body>
+</html>

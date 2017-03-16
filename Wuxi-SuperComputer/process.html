@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上机流程</title>
+    <link rel="stylesheet" href="css/format.css" media="screen">
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <script src="js/jquery_min.js"></script>
+    <script src="js/jquery.svg.min.js"></script>
+    <script>
+    $(function(){
+        $(".top .topbox .close ").click(function(){
+            $(this).parents(".top").animate({ opacity: 'hide' }, "slow");
+        });
+        
+        
+        $(".step").click(function(){
+            $(this).parent().find(".cover").removeClass("cover");             
+$(this).parents(".processcontainer").find(".active").removeClass("active");
+$(this).children(".img1").addClass("cover").next(".img2").addClass("active");           $(this).parent().parent().find(".tabcontent").children().eq($(this).index()).addClass("active")
+    });
+        
+        
+   });  
+   	function scroll_news(obj){
+$(obj).find("ul:first").animate({marginTop:"-40px"},500,function(){
+                $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+        });
+}
+
+        setInterval('scroll_news("#scroll")',4000);
+    </script>
+</head>
+<body>
+    <div class="top">
+       <div class="topbox ofH" >
+            <img src="image/radio.png" alt="新闻"  class="topradio">
+            <img src="image/close.png" alt="关闭" class="close">
+            <div id="scroll">
+                <ul>
+                    <li>
+                        <a href="#" style="color:#333">
+                        无锡超级计算中心荣获无锡超级计算中心荣获 
+                        <strong>2015-07-13</strong><span>了解详情 </span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:#333">
+                        无锡超级计算中心荣获无锡超级计算中心荣获
+                        <strong>2015-07-13</strong><span>了解详情 2</span> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>                      
+    </div>
+    <div class="title cb">
+        <div class="logo fL"></div>
+        <div class="slogan fL">
+            <div class="slUP">面向广大中小企业提供弹性计算服务！</div>
+            <div class="slD">服务电话：123-456-78</div>
+        </div>
+        <span class="titleR fR">
+            <div class="language">
+                <a href="">EN</a>/
+                <a href="">中文</a>
+            </div>
+            <div class="vpn">
+                VPN登陆：
+                <a href="" class="dx"><img src="image/dianxin.png" alt="">  电信</a>
+                <a href="" class="lt"><img src="image/liantong.png" alt=""> 联通</a>
+                <a href="" class="yd"><img src="image/yidong.png" alt=""> 移动</a>
+            </div>
+        </span>
+    </div>
+    <div class="navbox">
+        <ul class="nav taC">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="introduction.html">中心概况</a>
+            <div class="dropdown dropdown1 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">基础设施</a>
+                  <a href="" class="taC fR">中心风采</a>  
+            </div></li>
+            <li><a href="news.html">新闻公告</a>
+            <div class="dropdown dropdown2 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">中心新闻</a>
+                  <a href="" class="taC fR">业界动态</a>
+                  <a href="" class="taC fR">公示公告</a>    
+            </div></li>
+            <li><a href="software.html">中心资源</a>
+            <div class="dropdown dropdown3 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">硬件资源</a>
+                  <a href="" class="taC fR">软件资源</a>  
+            </div></li>
+            <li><a href="">中心业务</a>
+            <div class="dropdown dropdown4 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">高性能计算</a>
+                  <a href="" class="taC fR">云计算</a>
+                  <a href="" class="taC fR">动漫渲染</a>
+                  <a href="" class="taC fR">IDC托管</a>    
+            </div></li>
+            <li><a href="process.html">上机指南</a>
+            <div class="dropdown dropdown5 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">上机流程</a>
+                  <a href="" class="taC fR">常见问题</a>  
+            </div></li>
+            <li><a href="">案列分析</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="employ.html">诚聘英才</a></li>
+        </ul>   
+    </div>
+    <!--nav end-->
+    <div class="nlBox cb">
+        <h2 class="fL nlName">上机流程</h2>
+        <span class="fR">当前位置：首页 > 上机指南 > <strong>上机流程</strong></span>
+    </div>
+    <div class="newscontainer cb">
+        <div class="pageleft fL">
+            <div class="processcontainer">
+               <div class="tabable">
+                   <div class="step step1">
+                      <img class="img1 cover" src="image/process/step1.png" alt=""> 
+                      <img class="img2 active" src="image/process/step1_1.png" alt="" >
+                   </div>
+                   <div class="step step2">
+                      <img class="img1" src="image/process/step2.png" alt=""> 
+                      <img class="img2" src="image/process/step2_1.png" alt="">
+                   </div>
+                   <div class="step step3">
+                      <img class="img1" src="image/process/step3.png" alt=""> 
+                      <img class="img2" src="image/process/step3_1.png" alt="">
+                   </div>
+                   <div class="step step4">
+                      <img class="img1" src="image/process/step4.png" alt=""> 
+                      <img class="img2" src="image/process/step4_1.png" alt="">
+                   </div>
+                   <div class="step step5">
+                      <img class="img1" src="image/process/step5.png" alt=""> 
+                      <img class="img2" src="image/process/step5_1.png" alt="">
+                   </div>
+                   <div class="step step6">
+                      <img class="img1" src="image/process/step6.png" alt=""> 
+                      <img class="img2" src="image/process/step6_1.png" alt="">
+                   </div>
+                   <div class="step step7">
+                      <img class="img1" src="image/process/step7.png" alt=""> 
+                      <img class="img2" src="image/process/step7_1.png" alt="">
+                   </div>
+               </div>
+               <div class="tabcontent">
+                   <div class="active">
+                       <p class="taL">
+                           1.初始接洽<br>用户上机前所有的前期接洽工作均只需和无锡超级计算中心相应应用领域的项目经理联系。这些员工均在各领域有三年以上的高性能计算应用经验，熟悉该专业领域的理论体系，精通超级计算机架构、系统技术和并行计算技术。
+                       </p>
+                   </div>
+                   <div class="">
+                       <p class="taL">
+                           2.试用<br>在初始接洽后，用户可申请试用。主要目的是使用户熟悉应用环境和了解特定应用与高性能计算机的匹配性，决定正式使用时要申请的资源规模。此阶段不为强制必经阶段。<br>用户填写《无锡超级计算中心用户试用上机申请表》，由项目经理负责无锡超级计算中心内部审批程序，落实所需各项资源。<br>用户上机前应阅读、签署《无锡超级计算中心用户上机须知》。该责任书对用户使用无锡超级计算中心高性能计算资源的主要应知事项做出了全面约定，其主要目的是为了保护用户的信息安全和保障中心服务设施的可用率，以便为所有用户提供最优质服务。<br>用户试用过程中，无锡超级计算中心的应用工程师、并行软件工程师、系统工程师和网络工程师将根据需要为用户提供一定技术支持，但一般不进行大规模的软件并行化、移植和开发，此工作一般放于正式上机阶段进行。<br>试用阶段的补充注意事项：<br>1）试用阶段的用户远程账号应是每一天的有限时间段，在用户试用阶段结束后暂时封闭，若用户转至正式用户，则重新启用；<br>2）除使用许可证和结点绑定的商业软件的用户的作业提交至工作队列，其他所有试用用户的作业只能提交至调试队列；<br>3）源码级试用用户在主机系统上的总机时不应超过一万个CPU 小时，并发同时计算使用的总CPU 数不超过2，总期限不超过一个月。商业软件试用用户在主机系统上的总资源量不应超过一千个CPU 小时，并发同时计算使用的总CPU 数不超过8，总期限不超过七天。<br>用户试用完毕后，应提交《无锡超级计算中心用户上机试用报告》，应包括描述上机过程、与系统有关的问题及解决过程、对计算机系统性能的评价、建议、取得的成果（含文字、图片和动画）或说明已向无锡超级计算中心提交的成果材料情况。
+                       </p>
+                   </div>
+                   <div class="">
+                       <p class="taL">
+                           3.上机申请和专家评审<br>用户上机前所有的前期接洽工作均只需和无锡超级计算中心相应应用领域的项目经理联系。这些员工均在各领域有三年以上的高性能计算应用经验，熟悉该专业领域的理论体系，精通超级计算机架构、系统技术和并行计算技术。
+                       </p>
+                   </div>
+                   <div class="">
+                       <p class="taL">
+                           4.正式上机<br>用户正式上机前应阅读、签署《无锡超级计算中心用户上机须知》（若该用户已经过试用阶段则无需再次签署）。在项目经理组织的团队的支持下，用户开始正式上机，正式上机过程中根据协议或合同，无锡超级计算中心的应用工程师、并行软件工程师、系统工程师和网络工程师将为用户提供技术支持、开发和咨询服务，项目经理全程为用户提供服务。<br>
+用户上机过程中可随时查看作业运行和资源使用情况。无锡超级计算中心每月向用
+户寄发资源使用账单，并将原始记录通过电子邮件发送给用户。<br>
+                      用户应珍惜所分配的计算资源，并保持较高的利用率。
+                       </p>
+                   </div>
+                   <div class="">
+                       <p class="taL">
+                           5.继续用机评估<br>每一个上机项目按照《无锡超级计算中心高性能计算上机项目专家评审制度》的规定、待累计使用机时数达到规定值后接受无锡超级计算中心专家委员会的继续用机评估。以确定该项目是否继续获得上机资格、原定的计算资源规模是否需做调整。
+                       </p>
+                   </div>
+                   <div class="">
+                       <p class="taL">
+                           6.资源调整<br>用户上机期间若需对资源进行调整，提出申请后由无锡超级计算中心暂时批准后进行调整，正式调整将在继续用机评估时提出申请、并由专家委员会评估。各项资源调整应不能与所签协议/合同相矛盾。
+                       </p>
+                   </div>
+                   <div class="">
+                       <p class="taL">
+                           7.结束上机<br>根据合同或上机协议规定的时间期限，用户完成预定的上机任务并确认暂无延续项目后，则进入结束上机程序，用户向项目经理移交各种资源<br>
+用户向无锡超级计算中心提交《上机总结报告》，主要包括对上机过程整体情况的
+描述、取得的成果总体情况以及自最近一次年中/年终评审后至今取得的项目成果（论文、获奖证明的复印件）的详细资料、对机器的评价和建议、对无锡超级计算中心服务的建议。本报告用于是同一个用户后续新项目用机的审批必备材料之一。<br>
+用户若有新项目上机，则视用户实际需求从“试用”或“上机申请”阶段重新开始
+新项目的上机流程。
+                       </p>
+                   </div>
+               </div>
+            </div>
+            <div class="download">详细资料下载</div>
+            <div class="downloadbox ">
+                <div class="cb"><a href="" class="fL">无锡超级计算中心上机项目保密协议书</a><button class="fR taC">下载</button></div>
+                <div class="cb"><a href="" class="fL">无锡超级计算中心用户权限资源调整清单</a><button class="fR taC">下载</button></div>
+                <div class="cb"><a href="" class="fL">无锡超级计算中心用户上机申请表</a><button class="fR taC">下载</button></div>
+                <div class="cb"><a href="" class="fL">无锡超级计算中心用户上机须知</a><button class="fR taC">下载</button></div>
+                <div class="cb"><a href="" class="fL">无锡超级计算中心用户主机帐号变更申请表</a><button class="fR taC">下载</button></div>
+            </div>
+        </div>               
+        <div class="pageright fR">
+            <dl class="sidenav">
+                <dt><a href="">上机指南</a></dt>
+                    <dd><a href="">上机流程</a></dd>
+                    <dd><a href="">常见问题</a></dd>
+                <dt><a href="">中心风采</a></dt>
+                <dt><a href="">诚聘英才</a></dt>
+                    
+            </dl>
+            <div class="contactBG taC">
+                <a href=""><img src="image/contact.png" alt="">联系我们</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footerBG">
+        <div class="footerbox cb">
+            
+            <div class="footer fL ">
+                <div class="footerNav taR">
+                    <a href="">首页</a>
+                    <a href="">中心概况</a>
+                    <a href="">新闻公告</a>
+                    <a href="">中心资源</a>
+                    <a href="">中心业务</a>
+                    <a href="">上机指南</a>
+                    <a href="">案列分析</a>
+                    <a href="">联系我们</a>
+                    <a href="" class="lasta">诚聘英才</a>
+                </div>
+                   
+                <div class="addressbox  taR">
+                    <span>地址: 江苏省无锡市蠡园经济开发区滴翠路100号B楼2层<br>电话: 0510-85162179(技术支持部)、0510-85162150(工程计算部)<br>版权所有 @ 无锡超级计算中心  备号123456789-1</span>
+                </div>
+                <div class=" weibo taR">
+                    <a href=""><img src="image/sina.png" alt=""></a>
+                    <a href=""><img src="image/tecentweibo.png" alt=""></a>
+                    <span>扫二维码，了解更多 !</span>
+                </div>
+            </div>
+           <div class="erweima fR"><a href=""></a></div>
+        </div>
+    </div>
+</body>
+</html>

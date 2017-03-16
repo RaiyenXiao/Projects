@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>软件资源</title>
+    <link rel="stylesheet" href="css/format.css" media="screen">
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <script src="js/jquery_min.js"></script>
+    <script src="js/jquery.svg.min.js"></script>
+    <script>
+    $(function(){
+        $(".top .topbox .close ").click(function(){
+            $(this).parents(".top").animate({ opacity: 'hide' }, "slow");
+        });
+        
+        
+        $(".softwareresource:eq(0)").show();
+        $(".softwareBox .software").click(function(){           $(this).parent().parent().find(".softwarecurrent").removeClass("softwarecurrent").next(".softwareresource").slideUp('slow');
+            $(this).addClass("softwarecurrent");
+            $(this).next(".softwareresource").slideDown(500);
+        });
+    });
+        function scroll_news(obj){
+$(obj).find("ul:first").animate({marginTop:"-40px"},500,function(){
+                $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+        });
+}
+
+        setInterval('scroll_news("#scroll")',4000);
+    </script>
+</head>
+<body>
+    <div class="top">
+       <div class="topbox ofH" >
+            <img src="image/radio.png" alt="新闻"  class="topradio">
+            <img src="image/close.png" alt="关闭" class="close">
+            <div id="scroll">
+                <ul>
+                    <li>
+                        <a href="#" style="color:#333">
+                        无锡超级计算中心荣获无锡超级计算中心荣获 
+                        <strong>2015-07-13</strong><span>了解详情 </span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:#333">
+                        无锡超级计算中心荣获无锡超级计算中心荣获
+                        <strong>2015-07-13</strong><span>了解详情 2</span> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>                      
+    </div>
+    <div class="title cb">
+        <div class="logo fL"></div>
+        <div class="slogan fL">
+            <div class="slUP">面向广大中小企业提供弹性计算服务！</div>
+            <div class="slD">服务电话：123-456-78</div>
+        </div>
+        <span class="titleR fR">
+            <div class="language">
+                <a href="">EN</a>/
+                <a href="">中文</a>
+            </div>
+            <div class="vpn">
+                VPN登陆：
+                <a href="" class="dx"><img src="image/dianxin.png" alt="">  电信</a>
+                <a href="" class="lt"><img src="image/liantong.png" alt=""> 联通</a>
+                <a href="" class="yd"><img src="image/yidong.png" alt=""> 移动</a>
+            </div>
+        </span>
+    </div>
+    <div class="navbox">
+        <ul class="nav taC">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="introduction.html">中心概况</a>
+            <div class="dropdown dropdown1 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">基础设施</a>
+                  <a href="" class="taC fR">中心风采</a>  
+            </div></li>
+            <li><a href="news.html">新闻公告</a>
+            <div class="dropdown dropdown2 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">中心新闻</a>
+                  <a href="" class="taC fR">业界动态</a>
+                  <a href="" class="taC fR">公示公告</a>    
+            </div></li>
+            <li><a href="software.html">中心资源</a>
+            <div class="dropdown dropdown3 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">硬件资源</a>
+                  <a href="" class="taC fR">软件资源</a>  
+            </div></li>
+            <li><a href="">中心业务</a>
+            <div class="dropdown dropdown4 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">高性能计算</a>
+                  <a href="" class="taC fR">云计算</a>
+                  <a href="" class="taC fR">动漫渲染</a>
+                  <a href="" class="taC fR">IDC托管</a>    
+            </div></li>
+            <li><a href="process.html">上机指南</a>
+            <div class="dropdown dropdown5 cb">
+                  <img class="fL" src="image/nav1.png" alt="">
+                  <a href="" class="taC fR">上机流程</a>
+                  <a href="" class="taC fR">常见问题</a>  
+            </div></li>
+            <li><a href="">案列分析</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="employ.html">诚聘英才</a></li>
+        </ul>   
+    </div>
+    <!--nav end-->
+    <div class="nlBox cb">
+        <h2 class="fL nlName">软件资源</h2>
+        <span class="fR">当前位置：首页 > 中心资源 > <strong>软件资源</strong></span>
+    </div>
+    <div class="newscontainer cb">
+        <div class="pageleft fL">
+        <div class="resourceBox">
+            <div class="softwareBox">
+                <div class="software softwarecurrent">商品化应用软件</div>
+                <div class="softwareresource">
+                    <table class="taC" rules="all">
+                      <tr>
+                        <th class="columnone">序号</th>
+                        <th class="columnsecondy">软件名称</th>
+                        <th class="columnthird">描述</th>
+                        <th class="columnfourth">应用领域</th>
+                      </tr>
+                      <tr>
+                        <td class="columnone">1</td>
+                        <td class="columnsecondy">Fluebt</td>
+                        <td class="columnthird">通用计算机流体力学分析软件</td>
+                        <td class="columnfourth">航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">2</td>
+                        <td>Gambit</td>
+                        <td>Fluebt配套前处理软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">3</td>
+                        <td>Tgrid</td>
+                        <td>Fluebt配套前处理软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">4</td>
+                        <td>ANSYS CFX</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、汽车、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">5</td>
+                        <td>ANSYS Multiphysics</td>
+                        <td>多物理场耦合分析软件</td>
+                        <td>汽车、动力机械</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">6</td>
+                        <td>ANSYS ICEM-CFD</td>
+                        <td>CFD前后处理软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">7</td>
+                        <td>ANSYS Workbench</td>
+                        <td>协同仿真环境</td>
+                        <td>汽车、动力机械</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">8</td>
+                        <td>MSC.Nastran</td>
+                        <td>通用有限元分析软件</td>
+                        <td>航空航天、汽车</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">9</td>
+                        <td>MSC.Patran</td>
+                        <td>Nastran配套前处理软件</td>
+                        <td>航空航天、汽车</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">10</td>
+                        <td>LS-DYNA</td>
+                        <td>瞬态响应动力学分析软件</td>
+                        <td>航天、汽车、电子通讯</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">11</td>
+                        <td>ABAQUS</td>
+                        <td>非线性有限元软件分析</td>
+                        <td>汽车、船舶<br>Auto design,Ship design</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">12</td>
+                        <td>AVL FIRE</td>
+                        <td>发动机三维性能模拟软件</td>
+                        <td>汽车</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">13</td>
+                        <td>Ansoft（测试）</td>
+                        <td>三维电磁仿真软件</td>
+                        <td>航空航天、电子、半导体、计算机、通信</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">14</td>
+                        <td>Matlabt</td>
+                        <td>数值运算软件和仿真工具</td>
+                        <td>工程运算</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">15</td>
+                        <td>Maya</td>
+                        <td>动漫软件</td>
+                        <td>动漫产业</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">16</td>
+                        <td>Qube</td>
+                        <td>动漫软件</td>
+                        <td>动漫产业</td>
+                      </tr>
+
+                    </table>
+                </div>
+            </div> 
+            <div class="softwareBox">
+                <div class="software softwarecurrent">商品化应用软件</div>
+                <div class="softwareresource">
+                    <table class="taC" rules="all">
+                      <tr>
+                        <th class="columnone">序号</th>
+                        <th class="columnsecondy">软件名称</th>
+                        <th class="columnthird">描述</th>
+                        <th class="columnfourth">应用领域</th>
+                      </tr>
+                      <tr>
+                        <td class="columnone">1</td>
+                        <td class="columnsecondy">Fluebt</td>
+                        <td class="columnthird">通用计算机流体力学分析软件</td>
+                        <td class="columnfourth">航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">2</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">3</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">4</td>
+                        <td >Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">5</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">6</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">7</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">8</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">9</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">10</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">11</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">12</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">13</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">14</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">15</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+                      <tr>
+                        <td class="columnone">16</td>
+                        <td>Fluebt</td>
+                        <td>通用计算机流体力学分析软件</td>
+                        <td>航空航天、船舶</td>
+                      </tr>
+
+                    </table>
+                </div>
+            </div> 
+        </div>            
+        </div>
+        <div class="pageright fR">
+            <dl class="sidenav">
+                <dt><a href="">基础设施</a></dt>
+                    <dd><a href="">中心介绍</a></dd>
+                    <dd><a href="">组织架构</a></dd>
+                    <dd><a href="">荣誉资质</a></dd>
+                <dt><a href="">中心风采</a></dt>
+                <dt><a href="">诚聘英才</a></dt>
+                    
+            </dl>
+            <div class="contactBG taC">
+                <a href=""><img src="image/contact.png" alt="">联系我们</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footerBG">
+        <div class="footerbox cb">
+            
+            <div class="footer fL ">
+                <div class="footerNav taR">
+                    <a href="">首页</a>
+                    <a href="">中心概况</a>
+                    <a href="">新闻公告</a>
+                    <a href="">中心资源</a>
+                    <a href="">中心业务</a>
+                    <a href="">上机指南</a>
+                    <a href="">案列分析</a>
+                    <a href="">联系我们</a>
+                    <a href="" class="lasta">诚聘英才</a>
+                </div>
+                   
+                <div class="addressbox  taR">
+                    <span>地址: 江苏省无锡市蠡园经济开发区滴翠路100号B楼2层<br>电话: 0510-85162179(技术支持部)、0510-85162150(工程计算部)<br>版权所有 @ 无锡超级计算中心  备号123456789-1</span>
+                </div>
+                <div class=" weibo taR">
+                    <a href=""><img src="image/sina.png" alt=""></a>
+                    <a href=""><img src="image/tecentweibo.png" alt=""></a>
+                    <span>扫二维码，了解更多 !</span>
+                </div>
+            </div>
+           <div class="erweima fR"><a href=""></a></div>
+        </div>
+    </div>
+</body>
+</html>
