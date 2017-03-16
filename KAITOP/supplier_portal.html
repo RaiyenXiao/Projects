@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>江苏开拓—供应商入口</title>
+	<link rel="stylesheet" type="text/css" href="css/format.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jtks_inner.css"/>
+</head>
+<body>
+	<!--top-->
+	<div class="top">
+		<div class="main-t-w mc clearfix">
+			<div class="logo fL clearfix">
+				<img src="image/logo_inner.png" alt="江苏开拓" class="fL"/>
+				<div class="text fL">采购中心</div>
+			</div>
+			<div class="fR">
+				<div class="t-rbox">
+					<div class="taR"><a href="supplier_portal.html">用户登录</a></div>
+					<div class="rbox-b">
+						<span class="date">2016年08月22日  </span>
+						<span class="week">周一</span>
+						<a href="index.html">首页</a>
+						<span class="collect" onclick="AddFavorite(title,location.href)">收藏本站</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section main-w mc">
+		<div class="loginbox">
+			<div class="title taC">
+				供应商入口
+			</div>
+			<div class="login">
+				<div class="user clearfix">
+					<div class="fL"><i class="ico-user"></i></div>
+					<input type="text" class="fL"/>
+				</div>
+				<div class="password clearfix">
+					<div class="fL"><i class="ico-password"></i></div>
+					<input type="text" class="fL"/>
+				</div>
+				<div class="clearfix login-b">
+					<div class="fL"><a href="forget_password.html">忘记密码？</a></div>
+					<div class="fR"><a href="">注册会员</a></div>
+				</div>
+				<div class="btn-login taC">
+					<button type="submit">登录</button>
+				</div>
+			</div>
+			<div class="login-bg"></div>
+		</div>
+	</div>
+	<!--footer-->
+	<div class="copyright taC">
+		©江苏开拓信息与系统有限公司版权所有 苏ICP备16008843号-1
+	</div>
+</body>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$WHeight=$(window).height();
+		$MHeight = $WHeight-210;
+		$(".section").height($MHeight)
+	})
+</script>
+</html>

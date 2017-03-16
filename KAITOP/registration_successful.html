@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>江苏开拓-注册成功</title>
+	<link rel="stylesheet" type="text/css" href="css/format.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jtks_inner.css"/>
+</head>
+<body>
+	<!--top-->
+	<div class="top">
+		<div class="main-t-w mc clearfix">
+			<div class="logo fL clearfix">
+				<img src="image/logo_inner.png" alt="江苏开拓" class="fL"/>
+				<div class="text fL">采购中心</div>
+			</div>
+			<div class="fR">
+				<div class="t-rbox">
+					<div class="taR"><a href="#"></a></div>
+					<div class="rbox-b">
+						<span class="date">2016年08月22日  </span>
+						<span class="week">周一</span>
+						<a href="index.html">首页</a>
+						<span class="collect" onclick="AddFavorite(title,location.href)">收藏本站</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--main-->
+	<div class="main-w mc">
+		<div class="stepbox">
+			<div class="progress step3">
+				<div class="step pos1"></div>
+				<div class="step pos2"></div>
+				<div class="step pos3"></div>
+				<div class="stepactive pos11">1</div>
+				<div class="stepactive pos12">2</div>
+				<div class="stepactive pos13">3</div>
+				<div class="stepstate1">供应商登记</div>
+				<div class="stepstate2">填写具体信息</div>
+				<div class="stepstate3">注册成功</div>
+				<div class="progress-line"></div>
+				<div class="progress-bg"></div>
+			</div>
+		</div>
+		<div class="success-tip">
+			<div class="success"><i class="ico-smile"></i><span>马上激活账号</span></div>
+			<h3>我们已经向您的邮箱&nbsp;<a href="">XXXXXX@XX.com</a>&nbsp;发送了一封激活邮件，请点击邮件中的链接完成注册！</h3>
+			<h4>还没收到？<a href="javascript:void(0)">再次发送</a></h4>
+		</div>
+	</div>	
+	<!--footer-->
+	<div class="copyright taC">
+		©江苏开拓信息与系统有限公司版权所有 苏ICP备16008843号-1
+	</div>
+</body>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$WHeight=$(window).height();
+		$MHeight = $WHeight-230
+		$(".main-w").height($MHeight)
+	})
+</script>
+</html>

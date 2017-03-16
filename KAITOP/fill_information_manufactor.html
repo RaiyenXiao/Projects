@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>江苏开拓-填写具体信息_厂家</title>
+	<link rel="stylesheet" type="text/css" href="css/format.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jtks_inner.css"/>
+</head>
+<body>
+	<!--top-->
+	<div class="top">
+		<div class="main-t-w mc clearfix">
+			<div class="logo fL clearfix">
+				<img src="image/logo_inner.png" alt="江苏开拓" class="fL"/>
+				<div class="text fL">采购中心</div>
+			</div>
+			<div class="fR">
+				<div class="t-rbox">
+					<div class="taR"><a href="#"></a></div>
+					<div class="rbox-b">
+						<span class="date">2016年08月22日  </span>
+						<span class="week">周一</span>
+						<a href="index.html">首页</a>
+						<span class="collect" onclick="AddFavorite(title,location.href)">收藏本站</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--main-->
+	<div class="main-w mc">
+		<div class="stepbox">
+			<div class="progress step2">
+				<div class="step pos1"></div>
+				<div class="step pos2"></div>
+				<div class="step pos3"></div>
+				<div class="stepactive pos11">1</div>
+				<div class="stepactive pos12">2</div>
+				<div class="stepactive pos13">3</div>
+				<div class="stepstate1">供应商登记</div>
+				<div class="stepstate2">填写具体信息</div>
+				<div class="stepstate3">注册成功</div>
+				<div class="progress-line"></div>
+				<div class="progress-bg"></div>
+			</div>
+		</div>
+		<div class="panel">
+			<div class="title">
+				<span>企业证书</span>
+			</div>
+			<div class="panel-innerbox">
+				<table>
+					<tbody>
+						<tr>
+							<th>证书名：</th>
+							<td colspan="3"><input type="text"/></td>
+						</tr>
+						<tr>
+							<th>认证日期：</th>
+							<td><input type="text" /></td>
+							<th>认证机构：</th>
+							<td><input type="text" /></td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<th>附件：</th>
+							<td><input type="text" placeholder="证书照片"/></td>
+							<th class="btn-upload" type="submit"><button>上传</button></th>
+						</tr>
+					</tbody>
+				</table>
+				<div class="add taR">
+					<button type="submit">+ 添加</button>
+				</div>
+			</div>
+			<div class="title">
+				<span>产品证书</span>
+			</div>
+			<div class="panel-innerbox">
+				<table>
+					<tbody>
+						<tr>
+							<th>产品名称：</th>
+							<td><input type="text"/></td>
+							<th>产品证书名称：</th>
+							<td><input type="text" /></td>
+						</tr>
+						<tr>
+							<th>产品介绍：</th>
+							<td colspan="3"><input type="text" /></td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<th>附件：</th>
+							<td><input type="text" placeholder="证书照片"/></td>
+							<th class="btn-upload" type="submit"><button>上传</button></th>
+						</tr>
+					</tbody>
+				</table>
+				<div class="add taR">
+					<button type="submit">+ 添加</button>
+				</div>
+			</div>
+			<div class="title">
+				<span>产品遵守标准</span>
+			</div>
+			<div class="panel-innerbox">
+				<div class="labelbox clearfix">
+					<label><input type="radio" value="国际标准">国际标准</label>
+					<label><input type="radio" value="国家标准">国家标准</label>
+					<label><input type="radio" value="行业标准">行业标准</label>
+					<label><input type="radio" value="企业标准">企业标准</label>
+				</div>
+			</div>
+			<div class="title">
+				<span>品牌信息</span>
+			</div>
+			<div class="panel-innerbox">
+				<table>
+					<tbody>
+						<tr>
+							<th>品牌名称：</th>
+							<td><input type="text" /></td>
+							<th>正常交货周期：</th>
+							<td><input type="text" /></td>
+						</tr>
+						<tr>
+							<th>产品销售区域：</th>
+							<td><input type="text" /></td>
+							<th>主要竞争产品：</th>
+							<td><input type="text" placeholder="不少于三个"/></td>
+						</tr>
+						<tr>
+							<th>工厂地址：</th>
+							<td colspan="3"><input type="text"/></td>
+						</tr>
+						<tr>
+							<th>品牌操作模式：</th>
+							<td colspan="3">
+								<div class="labelbox2">
+									<label><input type="radio" value="直营" name="way">直营</label>
+									<label><input type="radio" value="总代理（链接代理商信息如下）" name="way">总代理（链接代理商信息如下）</label>
+								</div>
+							</td>
+						</tr>
+						<tr class="operation_mode">
+							<th>总代理名称：</th>
+							<td><input type="text" /></td>
+							<th>联系人及电话：</th>
+							<td><input type="text" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="main-w mc">
+		<div class="taR next">
+			<a href="registration_successful.html">下一步</a>
+		</div>
+	</div>
+	
+	<!--footer-->
+	<div class="copyright taC">
+		©江苏开拓信息与系统有限公司版权所有 苏ICP备16008843号-1
+	</div>
+</body>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.labelbox2 input[type="radio"]').click(function(){
+			if ($(this).val() == '直营') {
+				$('.operation_mode').hide()
+			} else if($(this).val() == '总代理（链接代理商信息如下）'){
+				$('.operation_mode').show()
+			}
+		})
+	})
+</script>
+</html>

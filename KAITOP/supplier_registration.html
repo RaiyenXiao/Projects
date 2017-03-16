@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>江苏开拓-供应商登记</title>
+	<link rel="stylesheet" type="text/css" href="css/format.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jtks_inner.css"/>
+</head>
+<body>
+	<!--top-->
+	<div class="top">
+		<div class="main-t-w mc clearfix">
+			<div class="logo fL clearfix">
+				<img src="image/logo_inner.png" alt="江苏开拓" class="fL"/>
+				<div class="text fL">采购中心</div>
+			</div>
+			<div class="fR">
+				<div class="t-rbox">
+					<div class="taR"><a href="#"></a></div>
+					<div class="rbox-b">
+						<span class="date">2016年08月22日  </span>
+						<span class="week">周一</span>
+						<a href="index.html">首页</a>
+						<span class="collect" onclick="AddFavorite(title,location.href)">收藏本站</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--main-->
+	<div class="main-w mc">
+		<div class="stepbox">
+			<div class="progress step1">
+				<div class="step pos1"></div>
+				<div class="step pos2"></div>
+				<div class="step pos3"></div>
+				<div class="stepactive pos11">1</div>
+				<div class="stepactive pos12">2</div>
+				<div class="stepactive pos13">3</div>
+				<div class="stepstate1">供应商登记</div>
+				<div class="stepstate2">填写具体信息</div>
+				<div class="stepstate3">注册成功</div>
+				<div class="progress-line"></div>
+				<div class="progress-bg"></div>
+			</div>
+		</div>
+		<div class="panel">
+			<div class="title">
+				<span>填写注册账号</span>
+			</div>
+			<div class="panel-innerbox">
+				<table>
+					<tbody>
+						<tr>
+							<!--<th>用户名：</th>
+							<td><input type="text" placeholder="4-20个字符"/></td>-->
+							<th>注册邮箱:</th>
+							<td><input type="text" placeholder="用于忘记密码时，重置密码。" /></td>
+							<th class="tip2"></th>
+						</tr>
+						<tr>
+							<th>密码：</th>
+							<td><input type="text" /></td>
+							<th colspan="2" class="tip2">6-20个字符,建议使用有一定复杂度，不易被别人猜到的密码</th>
+						</tr>
+						<tr>
+							<th>确认密码：</th>
+							<td><input type="text" /></td>
+							<th colspan="2" class="tip"></th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="title">
+				<span>公司类别</span>
+			</div>
+			<div class="panel-innerbox">
+				<div class="labelbox clearfix" id="supplier">
+					<label><input type="radio" value="厂家" name="supplier">厂家</label>
+					<label><input type="radio" value="代理商" name="supplier">代理商</label>
+					<label><input type="radio" value="软件开发" name="supplier">软件开发</label>
+					<label><input type="radio" value="施工" name="supplier">施工</label>
+				</div>
+			</div>
+			<div class="title">
+				<span>工商注册信息</span>
+			</div>
+			<div class="panel-innerbox">
+				<table>
+					<tbody>
+						<tr>
+							<th>公司名称：</th>
+							<td><input type="text" /></td>
+							<th>登记地址:</th>
+							<td><input type="text" /></td>
+						</tr>
+						<tr>
+							<th>注册省市：</th>
+							<td><input type="text" /></td>
+							<th>注册时间:</th>
+							<td><input type="text" /></td>
+						</tr>
+						<tr>
+							<th>注册资金：</th>
+							<td><input type="text" /></td>
+							<th>企业法人:</th>
+							<td><input type="text" /></td>
+						</tr>
+						<tr>
+							<th class="vaT">经营范围：</th>
+							<td colspan="3"><textarea></textarea></td>
+						</tr>
+					</tbody>
+				</table>	
+			</div>
+			<div class="title">
+				<span>业务经办人</span>
+			</div>
+			<div class="panel-innerbox">
+				<table>
+					<tbody>
+						<tr>
+							<th>姓名：</th>
+							<td><input type="text" /></td>
+							<th>职务:</th>
+							<td><input type="text" /></td>
+						</tr>
+						<tr>
+							<th>联系地址：</th>
+							<td><input type="text" /></td>
+							<th>邮编:</th>
+							<td><input type="text" /></td>
+						</tr>
+						<tr>
+							<th>固定电话：</th>
+							<td><input type="text" /></td>
+							<th>传真:</th>
+							<td><input type="text" /></td>
+						</tr>
+						<tr>
+							<th>手机：</th>
+							<td><input type="text" /></td>
+							<th>电子邮箱:</th>
+							<td><input type="text" /></td>
+						</tr>
+					</tbody>
+				</table>	
+			</div>
+			<div class="title">
+				<span>人员信息</span>
+			</div>
+			<div class="panel-innerbox">
+				<table>
+					<tbody>
+						<tr>
+							<th>公司总人数：</th>
+							<td><input type="text" /></td>
+							<th>销售员人数:</th>
+							<td><input type="text" /></td>
+						</tr>
+						<tr>
+							<th>工程师人数：</th>
+							<td><input type="text" /></td>
+							<th>研发人数:</th>
+							<td><input type="text" /></td>
+						</tr>
+						<tr>
+							<th>维保人数：</th>
+							<td><input type="text" /></td>
+							<th colspan="2"></th>
+						</tr>
+					</tbody>
+				</table>	
+			</div>
+			<div class="title">
+				<span>上传附件</span>
+			</div>
+			<div class="panel-innerbox">
+				<table>
+					<tbody>
+						<tr>
+							<th>附件1：</th>
+							<td><input type="text" placeholder="营业执照副本"/></td>
+							<th class="btn-upload" type="submit"><button>上传</button></th>
+						</tr>
+						<tr>
+							<th>附件2：</th>
+							<td><input type="text" placeholder="组织机构代码证书复印件"/></td>
+							<th class="btn-upload" type="submit"><button>上传</button></th>
+						</tr>
+						<tr>
+							<th>附件3：</th>
+							<td><input type="text" placeholder="税务登记证"/></td>
+							<th class="btn-upload" type="submit"><button>上传</button></th>
+						</tr>
+						<tr>
+							<th>附件4：</th>
+							<td><input type="text" placeholder="前两年财务审计报告"/></td>
+							<th class="btn-upload" type="submit"><button>上传</button></th>
+						</tr>
+					</tbody>
+				</table>	
+			</div>
+		</div>
+	</div>
+	<div class="main-w mc">
+		<div class="taR next">
+			<a href="javascript:void(0)">下一步</a>
+		</div>
+	</div>
+	
+	<!--footer-->
+	<div class="copyright taC">
+		©江苏开拓信息与系统有限公司版权所有 苏ICP备16008843号-1
+	</div>
+</body>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		//根据公司类别跳转不同的供应商页面
+		$('.next a').click(function(){
+			var $value = $('#supplier input[type="radio"]:checked').val();
+			if($value){
+				switch( $value){
+					case "厂家":
+						window.location.href="fill_information_manufactor.html"
+						break;
+					case "软件开发":
+						window.location.href="fill_information_software.html"
+						break;
+					case "代理商":
+						window.location.href="fill_information_agent.html"
+						break;
+					case "施工":
+						window.location.href="fill_information_construction.html"
+						break;
+				}
+			}else{
+				alert("请选择一个公司类别")
+			}
+		})
+	})
+</script>
+</html>
