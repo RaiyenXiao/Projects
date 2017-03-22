@@ -1,0 +1,191 @@
+/* ======================================================================
+ * @description 跃豹物流官网css文件
+ * @author Raiyen
+ * @time 201603419
+ * ======================================================================
+ */
+/*public*/
+.width-main{
+	width:1000px;
+	}
+.img-responsive{
+	display: block;
+    max-width: 100%;
+    height: auto;
+}
+.width-main hr{
+	height:1px;
+	border:none;
+	border-top:1px solid #ddd;
+}
+.mt50{margin-top: 50px;}
+.mt10{margin-top: 10px;}
+.mt90{margin-top: 90px;}
+.mt210{margin-top: 210px;}
+.line{width: 1000px;height: 1px;background-color: #f0712c;position: relative;}
+.line h2{color: #f0712c;font-size: 28px;font-weight: normal;position: absolute;display: block;background-color: #fff;padding: 0 18px;z-index: 2;top: -44px;left: 50%;margin-left: -74px;}
+.bd-a1{border: 1px solid #c0c0c0;}
+/*========首页========*/
+/*top*/
+.top{background-color: #2c2c2c;width: 100%;height: 25px;position: relative;z-index: 1;}
+/*banner*/
+.banner{width: 100%;height: 100%;position: relative;overflow: hidden;z-index: 1;min-width: 1000px;}
+	.banner .swiper-pagination-bullet{width: 18px;height: 18px;background-color: #534e4b;opacity: 1;border: 3px solid #2c2c2c;}
+	.banner .swiper-pagination-bullet-active{background: #f0712c;}
+.banner.swiper-container-horizontal>.swiper-pagination{width: 1000px!important;text-align: right!important;bottom: 30px;}
+/*nav*/
+.navbox{position: absolute;z-index: 99;top: 0;left: 50%;margin-left: -500px;}
+/*top-nav*/
+.nav-pagination{background-color: #f0712c;border-top: 1px solid #f1884e;}
+.top-nav{height: 30px;line-height: 30px;background-color: #f0712c;border-bottom: 1px solid #d66227;}
+.top-nav .text{color: #fff;font-size: 12px;text-indent: 42px;}
+.top-nav .top-right a{display: inline-block;color: #fff;font-size: 12px;width: 100px;text-align: center;}
+.top-nav .top-right a[active]{color: #fffb9c;}
+.top-nav .top-right a:hover{color: #fffb9c;}
+.top-nav .top-right span{width: 2px;height: 14px;display: inline-block;vertical-align: middle;background-color: #d66227;border-right: 1px solid #f1894c;}
+.logo img{display: block;width: 167px;height: 61px;margin-top: 36px;margin-left: 40px;}
+.nav-pagination li{display: inline-block;}
+.nav-pagination li[active]{background-color: #f1884e;}
+.nav-pagination a{display: inline-block;color: #fff;font-size: 14px;padding:70px 22px 20px;}
+/*业务范围*/
+.businessbox{position: relative;z-index: 1;}
+.bc-grey{background-color: #e6e6e6;height: 174px;width: 100%;margin-top: 4px;position: relative;z-index: 2;}
+.business{border-bottom: 3px solid #f0712c;position: absolute;z-index: 99;left: 50%;margin-left: -500px;top: -96px;}
+.business .leftbox{width: 500px;background-color: #332f30;color: #fff;font-size: 16px;padding: 30px;line-height: 1.5;}
+.business .leftbox h3{font-size: 24px;color: #f0712c;margin: 0;}
+.business .leftbox>div{margin-top: 26px;text-shadow: 2px 3px 4px rgba(0,0,0,.9);}
+.business .rightbox{width: 500px;padding-left: 30px;}
+.business .rightbox .more-link{font-size: 20px;color: #f0712c;font-weight: bold;display: block;margin-top: 120px;}
+.businessbox .rightbox .more-img>div{border: 6px solid #fff;margin-top: 16px;}
+/*main*/
+.aboutbox{width: 620px;}
+.servicebox{width: 310px;}
+.aboutbox h2,.servicebox h2{font-size: 30px;color: #2b2b2b;margin: 0 0 40px;}
+.aboutbox p.about-detail{line-height:23px;color: #8d8988;}
+.aboutbox p.about-detail img{display: block;width: 244px;height: 108px;margin-right: 10px;}
+.aboutbox a.more,.servicebox a.more{width: 182px;height: 44px;text-align: center;line-height: 44px;color: #f0712c;background-color: #2c2c2c;display: block;font-size: 14px;margin-top: 50px;}
+.servicebox a.more{margin-top: 46px;}
+.servicebox .service-list li{padding-top: 45px;padding-bottom: 14px;width: 100%;border-bottom: 1px solid #d3d3d3;border-top: 1px solid #e8e8e8;}
+.servicebox .service-list li:first-child{padding-top: 0;border-top: none;}
+.servicebox .service-list li span{display: inline-block;width: 12px;height: 10px;background-image: url(../image/arrow.png);margin-right: 10px;}
+/*footer*/
+.footer{background-color: #2c2c2c;border-top: 3px solid #f0712c;}
+.electric-service{padding: 70px 60px 40px 30px;border-bottom: 1px solid #242424;}
+.electric-service h2{font-size: 24px;color: #f0712c;margin: 0 0 30px;}
+.electric-service .describe{color: #747371;margin-top: 20px;}
+.copyright{padding: 30px 60px 30px 30px;color: #747371;font-size: 12px;border-top: 1px solid #3c3c3c;}
+.copyright span{color: #f0712c;}
+.copyright img{display: inline-block;margin-top: 4px;}
+.footer .partnersBox>*{display: inline-block;vertical-align: middle;}
+.partnersBox .arrow-left{cursor: pointer;font-size: 30px;color: #f0712c;}
+.partnersBox .arrow-right{cursor: pointer;font-size: 30px;color: #f0712c}
+.partnersBox .partners{width: 860px;height: 35px;margin:0 10px;position: relative;overflow: hidden;}
+.partnersBox .partners ul{position: absolute;left: 0;top: 0;width: 1400px;}
+.partnersBox .partners li{float: left;margin-right: 18px;width: 80px;}
+/*=======关于我们=========*/
+.company-profile{margin-top: 180px;}
+.company-profile h2,.purpose h2{font-size: 28px;color: #f0712c;margin:0;font-weight: normal;}
+.company-profile h3,.purpose h3{color: #131313;font-size: 14px;margin: 10px 0 0;font-weight: normal;}
+.company-profile p{font-size: 14px;color: #4e4e4e;line-height: 24px;margin-top: 70px;}
+/*入仓服务*/
+.warehousing{padding: 60px 120px;}
+.warehousing h3{font-size: 27px;color: #f0712c;margin:0;font-weight: normal;}
+.warehousing p{font-size: 14px;color: #4e4e4e;line-height: 24px;margin-top: 24px;}
+.warehousing p span{color: #f0712c;}
+.warehousing>img{width: 475px;height: 347px;display: block;margin: 40px auto 0;}
+/*行业趋势*/
+.industry-trends{padding: 60px 16px;}
+.industry-trends h3,.data-survey h3{font-size: 27px;color: #f0712c;margin:0;font-weight: normal;}
+.industry-trends .p1{font-size: 14px;color: #131313;line-height: 24px;margin-top: 24px;}
+.industry-trends .p2{font-size: 14px;color: #131313;line-height: 24px;padding: 0 100px;}
+.industry-trends>img{width: 650px;height: 500px;display: block;margin: 50px auto 0;}
+.data-survey{padding: 60px 0;}
+.data-survey p{font-size: 14px;color: #131313;line-height: 24px;margin-top: 24px;}
+.data-survey>img{width: 900px;height:500px ;display: block;margin: 100px auto 0;}
+/*跃豹宗旨*/
+.purpose{padding: 100px 80px 50px 0;}
+.purpose-detail .fL{font-size: 14px;color: #131313;line-height: 24px;margin-top: 48px;}
+/*=======联系我们===============*/
+.contact h2{color: #f0712c;font-size: 28px;font-weight: normal;position: absolute;display: block;background-color: #fff;padding: 0 18px;z-index: 2;top: -44px;left: 50%;margin-left: -74px;}
+.address{padding: 0 30px;margin: 40px 0;font-size: 16px;color: #2c2c2c;}
+.my-map { margin: 0 auto; width: 1000px; height: 540px; }
+.my-map .icon { background: url(http://lbs.amap.com/console/public/show/marker.png) no-repeat; }
+.my-map .icon-pot { height: 23px; width: 31px; }
+.my-map .icon-pot-blue { background-position: -234px -55px; }
+/*=======服务电商===============*/
+.electric-detail,.warehoue-detail{font-size: 14px;color: #131313;line-height: 24px;padding: 40px 0 0 30px;}
+.logoimg{display: block;width: 998px;height: 370px;}
+/*=======高校入仓===============*/
+.serviceMap{border: 1px solid #ccc;height: 600px;margin-top: 50px;}
+/*=============标准服务==================*/
+
+.slogan h2{font-size: 26px;color: #f0712c;font-weight: normal;margin: 16px auto;}
+.column{width: 800px;padding: 70px 0;}
+.column li{float: left;width: 200px;font-size: 14px;color: #333;border-left: 1px solid #a0a0a0;padding: 0 20px 40px;line-height: 1.4;}
+	.column li:first-child{border: none;}
+.column li [class^=ico-]{margin: 50px auto 30px;height: 68px;}
+.ico-service1{background-image: url(../image/shezhizhuanye.png);width: 98px;}
+.ico-service2{background-image: url(../image/gongtongjujiao.png);width: 75px;}
+.ico-service3{background-image: url(../image/vip.png);width: 69px;}
+.ico-service4{background-image: url(../image/zhiliangbaobiao.png);width: 57px;}
+.slogan2{font-size: 36px;color: #f0712c;margin-top: 20px;margin-bottom: 40px;}
+.slogandetail{font-size: 14px;line-height: 1.4;width: 470px;}
+.service-shown{width: 691px;position: relative;height: 487px;margin-top: 30px;background-image: url(../image/xiangmuwuyou.png);margin-bottom: 80px;}
+.service-shown [class^=shown]{font-size: 14px;line-height: 1.4;color: #333;}
+	.shown1{position: absolute;left: 0;top: 70px;}
+	.shown2{position: absolute;left: 50px;bottom: 60px;}
+	.shown3{position: absolute;right: 0;top: 150px;}
+.solution{padding: 100px 0 20px 0;}
+.solution h2{font-size: 28px;color: #f0712c;margin: 0;font-weight: normal;}
+.solution .solutionImg{width: 990px;height: 480px;background-image: url(../image/solution.png);margin-top: 100px;}
+.solution h3{font-size: 20px;color: #5d5d5d;}
+/*=========系统支持===========*/
+.supportBox .support{margin-top: 50px;background-color: #f5f5f5;padding: 20px 0;}
+.supportBox h2{color: #f0712c;font-size: 28px;font-weight: normal;margin: 40px auto 0;}
+.supportBox h3{font-size: 16px;color: #333;font-weight: normal;margin: 20px 0;}
+.supportBox .support li [class^=ico-]{height: 74px;margin: 40px auto 30px;}
+	.ico-support1{background-image: url(../image/support1.png);width: 79px;}
+	.ico-support2{background-image: url(../image/support2.png);width: 80px;}
+	.ico-support3{background-image: url(../image/support3.png);width: 88px;}
+	.ico-support4{background-image: url(../image/support4.png);width: 58px;}
+	.ico-support5{background-image: url(../image/support5.png);width: 74px;}
+.supportBox .support li{color: #333;font-size: 12px;line-height: 1.4;width: 200px;padding: 0 20px 60px;border-left: 1px solid #aaa;}
+.supportBox .support li:first-child{border: none;}
+.system h2{color: #f0712c;font-size: 28px;font-weight: normal;margin: 60px auto;}
+.system-column{width: 840px;padding-bottom: 50px;}
+.system .system-column [class^=ico-]{width: 160px;height: 93px;margin-bottom: 30px;}
+	.ico-system1{background-image:url(../image/dianshang.png) ;}
+	.ico-system2{background-image: url(../image/pingtai.png);}
+	.ico-system3{background-image:url(../image/shangjia.png) ;}
+	.ico-system4{background-image: url(../image/skskkss.png);}
+.system .system-column li{width: 180px;margin-left: 40px;color: #666;font-size: 14px;line-height: 1.4;}
+.system .system-column li:first-child{margin-left: 0;}
+.system .describe{padding: 0 14px;}
+/*========业务范围===========*/
+/*why us*/
+.why-us h2{color: #f0712c;font-size: 28px;font-weight: normal;margin-bottom: 10px;}
+.why-us h3{font-size: 16px;color: #333;font-weight: normal;margin: 0;}
+.why-us .row{width: 828px;margin-top: 70px;}
+.why-us .row li{margin-left: 20px;}
+.why-us .row li:first-child{margin-left: 0;}
+.why-us .row li [class^=ico-]{border: 1px solid #a9a9a9;width: 192px;height: 128px;}
+.why-us .row li:hover [class^=ico-]{border: 1px solid #ed6c00;}
+	.ico-row1{background-image: url(../image/zhongduohangyeshijian.png);}
+	.ico-row2{background-image: url(../image/zhinengguanli.png);}
+	.ico-row3{background-image: url(../image/jingyihuaguanli.png);}
+	.ico-row4{background-image: url(../image/zhuanyerucangtuandui.png);}
+.why-us .row .title{font-size: 14px;margin-top: 16px;color: #333;text-align: center;}
+/*服务*/
+.business-service h2{color: #f0712c;font-size: 28px;font-weight: normal;margin: 50px auto 10px;}
+.business-service h3{font-size: 16px;color: #333;font-weight: normal;margin: 0;}
+.business-service .tip{font-size: 14px;padding: 60px 16px 100px;}
+.service-listbox [class^=ico-]{height: 36px;margin-bottom: 10px;}
+	.ico-dcrk{background-image: url(../image/ico-dcrk.png);width:38px ;}
+	.ico-xmsj{background-image: url(../image/ico-xmsj.png);width:38px ;}
+	.ico-jjfa{background-image: url(../image/ico-jjfa.png);width:27px ;}
+	.ico-rkgl{background-image: url(../image/ico-rkgl.png);width:50px ;}
+	.ico-zkgl{background-image: url(../image/ico-zkgl.png);width:34px ;}
+	.ico-ddsc{background-image: url(../image/ico-ddsc.png);width:32px ;}
+.service-listbox>ul>li{margin-right: 56px;width: 110px;}
+.service-listbox .detail li{font-size: 14px;color: #666;margin-bottom: 12px;}
+.service-listbox .detail li:first-child{color: #f0712c;margin: 20px 0;}
