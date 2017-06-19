@@ -11,7 +11,7 @@
 <body>
 	<div class="top clearfix main-w mc">
 		<div class="fL logo">
-			<img src="img/logo.png" class="img-responsive"/>
+			<a href="index.html"><img src="img/logo.png" class="img-responsive"/></a>
 		</div>
 		<div class="fR Rbox" id="suopei">
 			<i class="icon-suopei"></i><span>索赔</span>
@@ -31,7 +31,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="main-w mc section">
+	<div class="main-w mc section mb60">
 		<!--国际物流报价-->
 		<div class="title">
 			<i class="icon-price"></i><span>国际物流报价</span>
@@ -46,12 +46,11 @@
 							<option value="日本">日本</option>
 						</select>
 					</div>
-					<div class="size">
-						<input type="text" placeholder="长" />&nbsp;cm&nbsp;
-						<input type="text" placeholder="宽" />&nbsp;cm&nbsp;
-						<input type="text" placeholder="高" />&nbsp;cm&nbsp;
-						<input type="text" placeholder="包裹重量 " class="weight"/>&nbsp;KG
-					</div>
+					<ul class="sizebox">
+						<li class="size">
+							<input type="text" placeholder="长" />&nbsp;cm&nbsp;<input type="text" placeholder="宽" />&nbsp;cm&nbsp;<input type="text" placeholder="高" />&nbsp;cm&nbsp;<input type="text" placeholder="包裹重量 " class="weight"/>&nbsp;KG
+						</li>
+					</ul>					
 				</form>
 				<div class="clearfix btn">
 					<button class="fL btn-calc">计算价格</button>
@@ -314,6 +313,19 @@
 			cursorcolor: "#9e9e9f",
 			bouncescroll:true
 		});
+		var sizeitme='<li class="size">'
+					+'<input type="text" placeholder="长" />&nbsp;cm&nbsp;'	
+					+'<input type="text" placeholder="宽" />&nbsp;cm&nbsp;'
+					+'<input type="text" placeholder="高" />&nbsp;cm&nbsp;'		
+					+'<input type="text" placeholder="包裹重量 " class="weight"/>&nbsp;KG'		
+					+' <span class="icon-delete"></span>'
+					+'</li>';
+		$(".btn-add").click(function(){
+			$(".sizebox").append(sizeitme)
+		})
+		$(".sizebox").on("click",".icon-delete",function(){
+			$(this).parent("li.size").remove();
+		})
 	})  
 </script>
 </html>
