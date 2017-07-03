@@ -62,9 +62,8 @@ body{overflow-x: hidden;}
 .footer{background-color: #1c2943;color: #dfdede;font-size: 12px;}		
 	.footer .footer-nav{border-bottom: 1px solid #ccc;}	
 	.footer .footer-nav li{display: inline-block;padding: 20px 0;}
-	.footer .footer-nav li a{width: 98px;border-left:1px solid #eae9eb ;border-right: 1px solid #dfdfe1;font-size: 14px;color: #fff;display: block;}
+	.footer .footer-nav li a{width: 98px;border-left:2px solid #dfdede;font-size: 14px;color: #fff;display: block;}
 	.footer .footer-nav li:first-child a{border-left: none;}
-	.footer .footer-nav li:last-child a{border-right: none;}
 	.footer .contact p{padding: 40px 0;line-height: 25px;}
 	.footer .copyright{background-color: #e9eef6;color: #111;font-size: 12px;line-height: 40px;}
 /*window*/
@@ -95,7 +94,8 @@ section{background-color: #f2f2f2;padding-bottom: 60px;}
 .introBox{margin-top: 34px;}
 	.introBox .introduction{width: 320px;}
 	.introBox .pack{width: 660px;}
-		.introBox .introduction .describe{font-size: 14px;color: #6c6a6a;line-height: 25px;padding: 20px;background-color: #fff;margin-top: 6px;height:276px ;font-weight: 400;}
+		.introBox .introduction .describe{font-size: 14px;line-height: 25px;padding: 20px;background-color: #fff;margin-top: 6px;height:276px ;font-weight: 400;}
+		.introBox .introduction .describe a{color: #555;}
 		.introBox .introduction .describe p:hover{text-decoration: underline;}
 		.introBox .pack .material{width: 326px;height: 135px;margin-top: 6px;position: relative;text-align: center;}
 		.introBox .pack .material1{background:url(../img/material1.png) no-repeat center;}
@@ -231,7 +231,7 @@ section{background-color: #f2f2f2;padding-bottom: 60px;}
 .buy .title{display: table;table-layout: fixed;width: 100%;margin-top: 40px;}
 	.buy .title>*{display: table-cell;vertical-align: bottom;}
 	.buy .title .Lbox{width: 42px;}
-		.buy .title .Lbox .icon-baby{width: 32px;height: 24px;background-image: url(../img/icon-baby.png);display: block;}
+		.buy .title .Lbox .icon-baby{width: 32px;height: 34px;background-image: url(../img/icon-baby.png);display: block;background-repeat: no-repeat;background-position-y: bottom;}
 		.buy .title .Lbox .icon-health{width: 27px;height: 34px;background-image: url(../img/icon-health.png);display: block;}
 	.buy .title .Rbox{width: 100%;border-bottom: 2px solid #00a4e3;padding-bottom: 5px;font-size: 12px;color: #555;font-weight: 400;}
 		.buy .title .Rbox .fL{color: #00a4e3;font-size: 14px;font-weight: 700;}
@@ -239,10 +239,10 @@ section{background-color: #f2f2f2;padding-bottom: 60px;}
 .buy .brandlist.brand{border: none;width: 200px;height: 286px;}
 .buy .brandlist .productbox{width: 200px;height: 286px;border: 1px solid #ddd;background-color: #f9f9f9;overflow: hidden;}
 .buy .brandlist a{display: block;overflow: hidden;height: 286px;}
-.buy .brandlist a .detail{padding: 10px;}
+.buy .brandlist a .detail{padding: 10px;line-height: 20px;}
 	.buy .brandlist .product{width: 200px;height: 200px;}
 	.buy .brandlist .proName{color: #313030;font-size: 14px;font-weight: 700;}
-	.buy .brandlist .litter{color: #555;font-size: 12px;line-height: 30px;}
+	.buy .brandlist .litter{color: #555;font-size: 12px;line-height: 12px;height: 24px;}
 	.buy .brandlist .price{color: #01b0e5;font-size: 14px;font-weight: 700;text-indent: -8px;}
 .buy .info{width: 200px;height: 286px;border: 2px solid #9acd09;color: #9acd09;background: url(../img/probg.png) right bottom no-repeat #fff;padding: 24px 6px 0;}
 	.buy .info h4{font-size: 16px;font-weight: 700;color: #9acd09;}
