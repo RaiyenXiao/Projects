@@ -1,0 +1,437 @@
+/* ======================================================================
+ * @description 智保网css文件
+ * @author Raiyen
+ * @time 20180322
+ * ======================================================================
+ */
+/*public*/
+a:hover,a:link,a:focus,a:active{text-decoration: none!important;}
+.mWidth{width: 1000px;}
+/*basic*/
+.win_panel{
+	background-color: rgba(0,0,0,.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	display: none;
+}
+.win_panel .close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 24px;
+	height: 24px;
+	background: url(../image/close.png) no-repeat center;
+	background-size: 24px;
+	cursor: pointer;
+}
+section{
+	margin-top: 80px;
+	padding-top: 20px;
+}
+section h2{
+	font-weight: normal;
+	font-size: 24px;
+	color: #333;
+}
+section .line{
+	width: 32px;
+	height: 10px;
+	background: url(../image/line.png) no-repeat center;
+	background-size: 100%;
+	margin: 10px auto;
+}
+section h4{
+	font-weight: normal;
+	color: #999;
+	font-size: 16px;
+}
+/*main*/
+#content{width: 100%;margin: 0 auto;}
+.win_panel .panel{
+	width: 250px;
+	height: 250px;
+	background-color: #fff;
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -125px;
+	margin-top: -125px;
+	font-size: 14px;
+}
+.win_panel .panel .title{
+	color: #000;
+	margin-top: 40px;
+}
+.win_panel .panel img{
+	width: 150px;
+	margin: 0 auto;
+	
+}
+.win_panel .panel p{
+	color: rgba(0,0,0,.6);
+	
+}
+#main{width: 100%;}
+	#main .swiper-container{width: 100%;height: 100%;}
+  	.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{width: 10px;height: 10px;border:1px solid #FF6D00; ;opacity: 1;background-color: transparent;}
+  	.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active,
+  	.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet:hover{background-color:#FF6D00; }
+  	#main .swiper-container .swiper-pagination span:last-child{display: none;} 
+#header{
+	padding: 13px 0 7px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color:#fff ;
+	z-index: 99;
+}
+.head .brand{
+	width: 120px;
+	display: block;
+}
+.head .menu-nav li{
+	padding: 0 24px;
+}
+.head .menu-nav a{
+	display: block;
+	color: #333;
+	font-size: 14px;
+	padding: 7px 0;
+}
+.head .menu-nav li.active a,.head .menu-nav li:hover a{
+	color: #FF6D00;
+	border-bottom: 2px solid #FF6D00;
+}
+.head .menu-nav .weChat{
+	width: 26px;
+	height: 26px;
+	background: url(../image/wechat.png) no-repeat center;
+	cursor: pointer;
+	background-size: 26px;
+	position: relative;
+}
+.head .menu-nav .weChat.active{
+	background-image:url(../image/wechat_p.png) ;
+}
+.head .menu-nav .weChat .erweima{
+	background-color: #fff;
+	position: absolute;
+	top: 40px;
+	width: 120px;
+	padding: 10px;
+	left: 50%;
+	margin-left: -60px;
+	display: none;
+}
+/*footer*/
+#main .footer{
+	margin: 0!important;
+	height: auto!important;
+}
+.footer{
+	background-color: #202121;
+	color: #fff;
+	font-size: 14px;
+	padding: 24px 0 20px;
+	margin-top: 50px;
+}
+.footer .wrap{
+	width: 1000px;
+	margin: 0 auto;	
+	position: relative;
+}
+.footer .wrap .foot-nav .logo img{
+	width: 110px;
+	height: 24px;
+}
+.footer .wrap .foot-nav li a{
+	display: block;
+	padding: 0 10px;
+	border-left: 1px solid #fff;
+	line-height: 24px;
+	color: #fff;
+}
+.footer .wrap .foot-nav li a:hover{
+	color: #FF6D00;
+}
+.footer .wrap .foot-nav li:first-child a{
+	border: none;
+	margin-left: 12px;
+}
+.footer .wrap .work-time{
+	margin: 20px 0 10px 0;
+}
+.footer .wrap .copyright .company{
+	margin-top: 8px;
+}
+.footer .wrap .foot-right img{
+	width: 100px;
+	height: 100px;
+}
+.footer .wrap .foot-right{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+/*首页*/
+.home-screen-1{
+	background: url(../image/home_bg.png) no-repeat center;
+	background-size: cover;
+}
+.home-screen-1 .slogan{
+	position: absolute;
+	left: 0;
+	top: 20%;
+	width: 100%;
+	color: #fff;
+}
+.home-screen-1 .slogan h1{
+	font-size: 56px;
+}
+.home-screen-1 .slogan p{
+	font-size: 22px;
+	max-width: 800px;
+	margin: 6px auto 0;
+}
+.home-screen-1 .btn{
+	color: #fff;
+	font-size: 16px;
+	background-color: #FF6D00;
+	border-radius:3px ;
+	width: 156px;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	margin-top: 20px;
+	cursor: pointer;
+	/*position: absolute;
+	top: 30%;
+	left: 50%;
+	margin-left: -78px;*/
+}
+.home-screen-1 .describe {
+	position: absolute;
+	left: 0;
+	bottom: 10%;
+	width: 100%;
+}
+.home-screen-1 .describe h2{
+	font-size: 24px;
+	color: #111;
+	margin-top: 8%;
+}
+.home-screen-1 .describe ul li{
+	font-size: 14px;
+	color: #666;
+	margin-top: 16px;
+}
+.home-screen-2,.home-screen-4{
+	background-color: #FFD800;
+}
+.function{
+	color: #000;
+	font-size: 16px;
+	height: 600px;
+	padding-left: 140px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -500px;
+	margin-top: -300px;
+	z-index: 1;
+}
+.function.function1{
+	background: url(../image/function_bg1.png) no-repeat 480px 240px;
+	background-size: 44%;
+}
+.function.function2{
+	background: url(../image/function_bg2.png) no-repeat 50px 260px;
+	background-size: 34%;
+}
+.function.function3{
+	background: url(../image/function_bg3.png) no-repeat 450px 260px;
+	background-size: 36%;
+}
+.function.function4{
+	background: url(../image/function_bg4.png) no-repeat 140px 280px;
+	background-size: 28%;
+}
+.function .text{
+	margin: 0 40px;
+	color: #333;
+}
+.function img{
+	display: block;
+	width: 362px;
+}
+.function h3{
+	font-size: 24px;
+	margin-top: 150px;
+}
+.function p{
+	font-size: 16px;
+	line-height: 1.8;
+	margin-top: 10px;
+}
+.function .btn{
+	width: 118px;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	border: 1px solid #000;
+	border-radius: 21px;
+	margin: 14px 0 0 20px;
+	cursor: pointer;
+}
+.function .btn:hover{
+	background-color: #FF6D00;
+	color: #fff;
+	border: 1px solid #FF6D00;
+}
+
+/*加入我们*/
+.aboutContent .detail{
+	width: 630px;
+	color: #333;
+	font-size: 14px;
+	margin: 30px auto 0;
+}
+.aboutContent ul{
+	width: 840px;
+	margin: 0 auto;
+}
+.aboutContent ul li{
+	width: 50%;
+	height:180px;
+	padding-top: 40px;
+	text-align: center;
+}
+.aboutContent ul li i{
+	display: block;
+	width: 40px;
+	margin: 0 auto;
+}
+.aboutContent ul li .name{
+	font-size: 16px;
+	color: #111;
+	font-weight: 700;
+	margin-top: 6px;
+}
+.aboutContent ul li p{
+	font-size: 14px;
+	color: #666;
+	margin-top: 8px;
+}
+/*联系我们*/
+.contactContent{
+	font-size: 14px;
+	color: #333;
+}
+.contactContent .detail{
+	margin-top: 24px;
+	font-weight: bold;
+}
+.contactContent  .email{
+	margin: 24px auto;
+}
+.contactContent .erweima img{
+	width: 130px;
+	height: 130px;
+	display: inline-block;
+}
+.contactContent .tip{
+	color: #999;
+}
+.contactContent .text{
+	margin: 35px auto 40px;
+	font-weight: bold;
+}
+.contactContent .address{
+	margin-bottom: 60px;
+}
+/*加入我们*/
+.joinContent .tabNab{
+	width: 170px;
+}
+.joinContent .tabNab .employBox {
+	margin-bottom: 20px;
+}
+.joinContent .tabNab .employBox .title{
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+	background: transparent url(../image/employ_add.png) right top no-repeat;
+	background-size: 20px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+}
+.joinContent .tabNab .employBox .title.active{
+	background: transparent url(../image/employ_close.png) right top no-repeat;
+	background-size: 20px;
+}
+.joinContent .tabNab .employBox .sub{
+	font-size: 12px;
+	font-weight: normal;
+	color: #999;
+}
+.joinContent .tabNab .employBox ul{
+	display: none;
+}
+.joinContent .tabNab .employBox ul li{
+	font-size: 14px;
+	color: #333;
+	line-height: 20px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.joinContent .tabNab .employBox ul li .icon{
+	display: inline-block;
+	background: url(../image/position_n.png) no-repeat center;
+	width: 14px;
+	height: 20px;
+	background-size: 100%;
+	vertical-align: text-bottom;
+	margin-right: 10px;
+}
+.joinContent .tabNab .employBox ul li:hover,
+.joinContent .tabNab .employBox ul li.active{
+	color: #FF6D00;	
+}
+.joinContent .tabNab .employBox ul li:hover .icon,
+.joinContent .tabNab .employBox ul li.active .icon{
+	background: url(../image/position_p.png) no-repeat center;
+	background-size: 100%;
+}
+.joinContent .tabContent{
+	padding-left: 100px;
+	max-width: 830px;
+}
+.joinContent .tabContent .name{
+	color: #FF6D00;
+	font-size: 18px;
+	font-weight: bold;
+}
+.joinContent .tabContent .title{
+	color: #333;
+	font-size: 14px;
+	margin-top: 20px;
+	font-weight: bold;
+}
+.joinContent .tabContent ul li{
+	font-size: 12px;
+	color: #666;
+	line-height: 2;
+}
+.joinContent .tabContent .contact{
+	font-size: 12px;
+	color: #666;
+	line-height: 2;
+	margin-top: 30px;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>关于我们</title>
+  <link rel="stylesheet" type="text/css" href="css/format.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <div id="header">
+   <nav class="head clearfix mWidth mc">
+    <!--Logo-->
+    <a class="brand fL" href="index.html">
+      <img src="image/logo.png" / class="img-responsive">
+    </a>
+    <div class="menu-nav fR tra-fast_EE">
+      <ul class="fL_E clearfix">
+        <li >
+          <a href="index.html">
+            首页
+          </a>
+        </li>
+        <li class="active">
+          <a href="about_us.html">
+            关于我们
+          </a>
+        </li>
+        <li>
+          <a href="contact_us.html">
+            联系我们
+          </a>
+        </li>
+        <li>
+          <a href="join_us.html">
+            加入我们
+          </a>
+        </li>
+        <li>
+          <div class="weChat">
+              <div class="erweima">
+                <img src="image/qrcode.jpg" alt="智保网微信二维码" class="img-responsive">
+                <p>关注微信公众号</p>
+              </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+  <section>
+    <h2 class="taC">关于我们</h2>
+    <div class="line"></div>
+    <h4 class="taC">ABOUT US</h4>
+    <div class="aboutContent mc">
+        <div class="detail">智保网是第三方保险咨询服务平台,公司切身实意的站在保民立场上，以“如何买到最划算的保险”为核心价值观，向保民提供保险疑问解答，保险定制、保险组合、保险规划服务。截止目前已为200万以上保民提供服务！</div>
+        <ul class="clearfix">
+          <li class="fL">
+            <i><img src="image/zhuanzhu.png" class="img-responsive"></i>
+            <div class="name">专注</div>
+            <p>持续为保民提供最划算的保险服务</p>
+          </li>
+          <li class="fR">
+            <i><img src="image/chengxin.png" class="img-responsive"></i>
+            <div class="name">诚信</div>
+            <p>多角度从保民的切身利益考虑</p>
+          </li>
+          <li class="fL">
+            <i><img src="image/youshan.png" class="img-responsive"></i>
+            <div class="name">友善</div>
+            <p>耐心、热情服务每一位用户或合作</p>
+          </li>
+          <li class="fR">
+            <i><img src="image/zunzhong.png" class="img-responsive"></i>
+            <div class="name">尊重</div>
+            <p>倾听每一位用户的心声，提供优质服务</p>
+          </li>
+        </ul>
+    </div>
+  </section>
+  <div class="footer">
+    <div class="wrap">
+      <div class="foot-left">
+        <div class="foot-nav clearfix">
+          <div class="logo fL">
+            <img src="image/logo.png" class="img-responsive">
+          </div>
+          <ul class="foot-menu clearfix fL_E">
+            <li><a href="about_us.html">关于我们</a></li>
+            <li><a href="contact_us.html">联系我们</a></li>
+            <li><a href="join_us.html">加入我们</a></li>
+          </ul>
+          <div class="foot-contact">
+            <div class="work-time">工作时间：周一至周六 9:00-18:00</div>
+            <div class="tel">客服电话：0510-66905640</div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright taC">
+        <div>苏ICP备16060367号-1</div>
+        <div class="company">版权所有2016-2018 无锡智保网络科技有限公司</div>
+      </div>
+      <div class="foot-right">
+        <div class="gzh"><img src="image/qrcode.jpg" alt=""></div>
+        <div>关注微信公众号</div>
+      </div>
+    </div>
+  </div>
+</body><script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  $(function(){
+    $(".weChat").click(function(){
+      $(this).toggleClass("active");
+      $(".erweima").toggle();
+    })
+  })
+</script>
+</html>

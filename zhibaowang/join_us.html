@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>联系我们</title>
+  <link rel="stylesheet" type="text/css" href="css/format.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <div id="header">
+   <nav class="head clearfix mWidth mc">
+    <!--Logo-->
+    <a class="brand fL" href="index.html">
+      <img src="image/logo.png" / class="img-responsive">
+    </a>
+    <div class="menu-nav fR tra-fast_EE">
+      <ul class="fL_E clearfix">
+        <li >
+          <a href="index.html">
+            首页
+          </a>
+        </li>
+        <li>
+          <a href="about_us.html">
+            关于我们
+          </a>
+        </li>
+        <li>
+          <a href="contact_us.html">
+            联系我们
+          </a>
+        </li>
+        <li class="active">
+          <a href="join_us.html">
+            加入我们
+          </a>
+        </li>
+        <li>
+          <div class="weChat">
+              <div class="erweima">
+                <img src="image/qrcode.jpg" alt="智保网微信二维码" class="img-responsive">
+                <p>关注微信公众号</p>
+              </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+  <section>
+    <h2 class="taC">加入我们</h2>
+    <div class="line"></div>
+    <h4 class="taC">JOIN US</h4>
+    <div class="joinContent mc mWidth clearfix">
+        <div class="tabNab fL">
+          <!--<div class="employBox">
+            <div class="title">
+              <div>技术岗位</div>
+              <div class="sub">Technical post</div>
+            </div>
+            <ul class="employList">
+              <li><i class="icon"></i>产品经理</li>
+              <li><i class="icon"></i>UI设计师</li>
+              <li><i class="icon"></i>前端工程师</li>
+              <li><i class="icon"></i>PHP工程师</li>
+              <li><i class="icon"></i>数据分析师</li>
+            </ul>
+          </div>-->
+        </div>
+        <div class="tabContent fL">
+          <!--<div class="name">产品经理</div>
+          <div class="work">
+            <div class="title">主要职责</div>
+            <ul>
+              <li>1、负责收集产品的需求并进行需求分析，负责产品功能、网站页面、APP的原型设计；</li>
+              <li>2、协助推进产品的研发，保证产品按计划开发及发布；</li>
+              <li>3、参与项目计划，能与UI设计、技术开发及测试团队进行良好的沟通协作；</li>
+              <li>4、协助运营同事，参与各平台运营，处理运营事务；</li>
+              <li>5、跟踪产品的运营数据及用户反馈，持续优化产品，快速迭代。</li>
+            </ul>
+          </div>
+          <div class="require">
+            <div class="title">任职要求</div>
+            <ul>
+              <li>1、具有本科及以上学历，5年以上互联网产品工作经验。</li>
+              <li>2、能够进行app产品操作，并熟练掌握原型设计工具；</li>
+              <li>3、具备良好的人际沟通能力和团队合作意识，能够承受较大工作压力。</li>
+            </ul>
+          </div>
+          <div class="contact">
+            发送简历及作品至：hr@ins88.cn<br/> 邮件主题为：“职位+从业经验+姓名”
+          </div>-->
+        </div>
+    </div>
+  </section>
+  <div class="footer">
+    <div class="wrap">
+      <div class="foot-left">
+        <div class="foot-nav clearfix">
+          <div class="logo fL">
+            <img src="image/logo.png" class="img-responsive">
+          </div>
+          <ul class="foot-menu clearfix fL_E">
+            <li><a href="about_us.html">关于我们</a></li>
+            <li><a href="contact_us.html">联系我们</a></li>
+            <li><a href="join_us.html">加入我们</a></li>
+          </ul>
+          <div class="foot-contact">
+            <div class="work-time">工作时间：周一至周六 9:00-18:00</div>
+            <div class="tel">客服电话：0510-66905640</div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright taC">
+        <div>苏ICP备16060367号-1</div>
+        <div class="company">版权所有2016-2018 无锡智保网络科技有限公司</div>
+      </div>
+      <div class="foot-right">
+        <div class="gzh"><img src="image/qrcode.jpg" alt=""></div>
+        <div>关注微信公众号</div>
+      </div>
+    </div>
+  </div>
+</body><script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var msg;
+	var empolyDetail;
+$(function() {
+	$(".weChat").click(function() {
+		$(this).toggleClass("active");
+		$(".erweima").toggle();
+	});
+	
+	empoly();
+	//获取招聘信息
+	function empoly(){
+		var tabNav = " ";
+		$.getJSON(
+			"json/employ.json",
+			function(data) {
+				if(data.resultBoolean == true) {
+					//console.log(data)
+					msg = data.result;
+					$.each(msg, function(i, items) {
+						tabNav += '<div class="employBox"><div class="title"><div>' + items["post"] + '</div><div class="sub">' + items["subpost"] + '</div></div>';
+						tabNav += '<ul class="employList">';
+						var positionArr = items["position"];
+						$.each(positionArr, function(j, sitems) {
+							tabNav += '<li onclick="detail(' + i + ',' + j + ')"><i class="icon"></i>' + sitems["name"] + '</li>'; //增加索引
+						});
+						tabNav += '</ul></div>';
+					});
+					$(".joinContent  .tabNab").append(tabNav);
+					detail(0, 0); //默认加载第一个
+					//初始化第一个tab显示 并且active列表下的第一个post
+					$(".employBox:eq(0) .employList").show();
+					$(".employBox:eq(0) .employList li:eq(0)").addClass("active");
+					$(".employBox:eq(0) .title").addClass("active");
+					//侧边导航伸缩
+					var $title = $(".employBox .title");
+					var $ul = $(".employBox .employList");
+					for(var i = 0; i < $title.length; i++) {
+						$title[i].onoff = true;
+						$title[i].index = i;
+						$title[0].onoff = false; //记录第一个下的employList为打开状态
+						$title[i].onclick = function() {
+							$(".employBox .employList li").removeClass("active");
+							for(var i = 0; i < $title.length; i++) {
+								if(i != this.index) {
+									$title[i].onoff = true;
+									$ul.hide();
+									$title.removeClass("active");
+								}
+							}
+							if(this.onoff) {
+								$ul.eq(this.index).show();
+								$(this).addClass("active");
+							} else {
+								$ul.eq(this.index).hide();
+								$(this).removeClass("active");
+							}
+							this.onoff = !this.onoff;
+						}
+					}
+					$(".employBox .employList li").click(function(){
+						$(".employBox .employList li").removeClass("active");
+						$(this).addClass("active");
+					})
+				}
+			}
+		);
+	}
+})
+function detail(n, m) {
+		empolyDetail ="";
+		$(".tabContent").html("");//清空detail
+		var position = msg[n].position[m];
+		empolyDetail += '<div class="workDetail"><div class="name">' + position.name + '</div><div class="work"><div class="title">主要职责</div>';
+		empolyDetail +='<ul>';
+		var workArr = position.positionWork;
+		var requireArr = position.requirement;
+		$.each(workArr, function(i, ssitems) {
+			empolyDetail += '<li>' + ssitems["work"] + '<li>';
+		});
+		empolyDetail += '</ul></div><div class="require"><div class="title">任职要求</div>';
+		empolyDetail += '<ul>';
+		$.each(requireArr, function(i, ssitems) {
+			empolyDetail += '<li>' + ssitems["require"] + '</li>';
+		});
+		empolyDetail += '</ul></div><div class="contact">发送简历及作品至：hr@qqbx.cn<br/> 邮件主题为：“职位+从业经验+姓名”</div></div></div>';
+		$(".joinContent  .tabContent").append(empolyDetail);
+}
+</script>
+</html>
