@@ -1,0 +1,69 @@
+<!--pages/personDetail/personDetail.wxml-->
+<view class="container">
+    <block wx:if="{{! showLoading}}">
+        <view class="fd-top">
+            <view class="fd-top-bg" style="background-image: url({{personDetail.avatars.large}})"></view>
+            <view class="fd-intro">
+                    <image src="{{personDetail.avatars.medium}}" class="fd_poster"></image>
+                <view class="fd-text">
+                    <view class="fd-name">{{personDetail.name}}</view>  
+                    <view class="fd-name_en">{{personDetail.name_en}}</view>     
+                    <view class="fd-intro-txt">星座：{{personDetail.constellation}}</view>        
+                    <view class="fd-intro-txt">性别：{{personDetail.gender}}</view>
+                    <view class="fd-intro-txt">
+                       出生地：{{personDetail.born_place}}
+                    </view>
+                    <!-- <view class="fd-intro-txt">更多中文名:
+                        <block wx:for="{{personDetail.aka}}" wx:for-item="akaItem" wx:for-index="akaIndex" wx:key="akaItem">
+                                {{akaItem}} 
+                        </block>
+                    </view>
+                    <view class="fd-intro-txt">更多英文名:
+                        <block wx:for="{{personDetail.aka_en}}" wx:for-item="akaItem" wx:for-index="akaIndex" wx:key="akaItem">
+                                {{akaItem}}
+                        </block>
+                    </view> -->
+                </view>
+            </view>
+        </view>
+        <view class="pd-area">
+            <view class="pd-area-list">
+                <view class="pd-area-title">
+                    影人简介
+                </view>
+                <view class="pd-polt">
+                    {{summary}}
+                    <text class='pd-polt-show' wx:if="{{allButton}}" bindtap="summaryAll">展开</text>
+                </view>
+            </view>
+            <view class="pd-area-list">
+                <view class="pd-area-title">
+                    影人照片
+                </view>
+                <view class="pd-photo">
+                    <block wx:for="{{personDetail.photos}}" wx:key="photosItem">
+                        <view class="pd-photo-item">
+                            <image class="fd-person-photo" src="{{item.cover}}"></image>
+                        </view>
+                    </block>
+                </view>
+            </view>
+            <view class="pd-area-list">
+                <view class="pd-area-title">
+                    近期作品
+                </view>
+                <view class="pd-work">
+                    <block wx:for="{{personDetail.works}}" wx:key="workItem">
+                        <view class="pd-work-item" data-id="{{item.subject.id}}" bindtap='viewFilmDetail'>
+                            <image class="pd-work-cover" src="{{item.subject.images.large}}"></image>
+                            <view class="pd-work-intro">
+                                <view class="pd-work-title">{{item.subject.title}}</view>
+                                <view class="pd-work-roles">担任：{{item.roles}}</view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

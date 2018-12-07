@@ -1,0 +1,13 @@
+<!--pages/search/search.wxml-->
+<view class='container'>
+  <view class='search-area'>
+    <form bindsubmit='search'>
+      <input class='search-txt' placeholder='请输入电影名称、演员或导演' name="keyword"></input>
+      <button class='search-btn' formType='submit'>搜索</button>
+    </form>
+  </view>
+  <view class='search-tag'>
+    <view class='search-tag-title'>热门标签:</view>
+    <view wx:for="{{hotTag}}" wx:key="hotTag" data-tag="{{item}}" class='search-item' bindtap='searchTag'>{{item}}</view>
+  </view>
+</view>

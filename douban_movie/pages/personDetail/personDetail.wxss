@@ -1,0 +1,126 @@
+/* pages/personDetail/personDetail.wxss */
+.fd-top{
+    position:relative;
+    width:100%;
+    height:600rpx;
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    overflow:hidden;
+}
+.fd-top-bg{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    height: 600rpx;
+    background-size:cover;
+    background-position:center;
+    filter:blur(30rpx);
+    transform:scale(1.2);
+    left: 0;
+    top: 0;
+}
+.fd-intro{
+    display: flex;
+    flex-direction: row;
+    padding-top: 80rpx;
+}
+.fd-intro .fd_poster{
+    width: 300rpx;
+    box-shadow:0 30rpx 150rpx rgba(255, 255, 255, .3);
+    height: 420rpx;
+}
+.fd-intro .fd-text{
+    color: #fff;
+    font-size: 28rpx;
+    width: 320rpx;
+    padding-left: 40rpx;
+    line-height: 1.5;
+}
+.fd-intro .fd-text .fd-name{
+    font-size: 30rpx;
+    font-weight: bold;
+    margin-top: 20rpx;
+}
+.pd-area .pd-area-list{
+    padding: 0 15rpx;
+    font-size: 28rpx;
+    color: #333;
+}
+.pd-area .pd-area-list .pd-area-title{
+    margin: 40rpx 0;
+    font-size: 32rpx;
+    border-left: 10rpx solid #47a86c;
+    padding-left: 20rpx; 
+}
+.pd-area .pd-area-list .pd-polt{
+    padding: 0 20rpx;
+}
+.pd-area .pd-area-list .pd-polt-show{
+    color: #47a86c;
+    padding: 0 20rpx;
+    position: relative;
+}
+.pd-area .pd-area-list .pd-polt-show::after{
+    border-left: 1px solid #47a86c;
+    border-bottom: 1px solid #47a86c;
+    transform:rotate(315deg);
+    display: block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    position: absolute;
+    top: 8rpx;
+    right: 0;
+}
+.pd-area .pd-area-list .pd-photo{
+    padding: 0 20rpx;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+}
+.pd-photo-item{
+    width: 230rpx;
+    height: 230rpx;
+    margin-right: 20rpx;
+}
+.pd-photo-item .fd-person-photo{
+    width: 230rpx;
+    height: 230rpx;
+}
+.pd-area-list .pd-work{
+    box-sizing:border-box;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content:space-between;
+
+}
+.pd-area-list .pd-work-item{
+    width: 350rpx;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    margin-bottom: 15rpx;
+}
+.pd-work-cover {
+    width: 350rpx;
+    height: 533rpx;
+}
+.pd-work-intro {
+    box-sizing: border-box;
+    padding: 10rpx;
+}
+.pd-work-title {
+    font-size: 36rpx;
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.pd-work-roles {
+    color: #666;
+}

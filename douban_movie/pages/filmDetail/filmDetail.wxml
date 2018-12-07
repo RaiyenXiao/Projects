@@ -1,0 +1,112 @@
+<!--pages/filmDetail/filmDetail.wxml-->
+<view class="container">
+<block wx:if="{{! showLoading}}">
+    <view class="fd-top">
+        <view class="fd-top-bg" style="background-image: url({{filmDetail.images.large}})"></view>
+        <view class="fd-intro">
+                <image src="{{filmDetail.images.medium}}" class="fd_poster"></image>
+            <view class="fd-text">
+                <view class="fd-title">{{filmDetail.title}}</view>
+                <view class="fd-intro-txt">导演：{{filmDetail.directors[0].name}}</view>
+                <view class="fd-intro-txt">演员：
+                    <block wx:for="{{filmDetail.casts}}" wx:for-item="filmDetailCastItem" wx:for-index="filmDetailCastIndex" wx:key="filmDetailCastItem">
+                            {{filmDetailCastItem.name}}
+                        <block wx:if="{{filmDetailCastIndex !== filmDetail.casts.length - 1}}">/</block>
+                    </block>
+                </view>
+                <view class="fd-intro-txt">豆瓣评分：
+                    <block wx:if="{{filmDetail.rating.average == 0}}">
+                        暂无评分
+                    </block>
+                    <block wx:else>
+                        {{filmDetail.rating.average}}分
+                    </block>
+                </view>
+                <view class="fd-intro-txt">上映年份：{{filmDetail.year}}年</view>
+            </view>
+        </view>
+    </view>
+    <view class="fd-data">
+        <view class="fd-data-item">
+            <view class="fd-data-num">{{filmDetail.collect_count}}</view>
+            <view class="fd-data-title">看过</view>
+        </view>
+        <view class="fd-data-item">
+            <view class="fd-data-num">{{filmDetail.wish_count}}</view>
+            <view class="fd-data-title">想看</view>
+        </view>
+        <view class="fd-data-item">
+            <view class="fd-data-num">{{filmDetail.ratings_count}}</view>
+            <view class="fd-data-title">评分人数</view>
+        </view>
+    </view>
+    <view class="fd-area">
+        <view class="fd-area-list">
+            <view class="fd-area-title">
+                剧情介绍
+            </view>
+            <view class="fd-polt">
+                {{filmDetail.summary}}
+            </view>
+        </view>
+        <view class="fd-area-list">
+            <view class="fd-area-title">
+                电影类型
+            </view>
+            <view class="fd-tag">
+                <block wx:for="{{filmDetail.genres}}" wx:for-item="filmDetailTagItem" wx:key="filmDetailTagItem">
+                    <view class="fd-tag-item" data-tag="{{filmDetailTagItem}}" catchtap="viewFilmByTag">{{filmDetailTagItem}}</view>
+                </block>
+            </view>
+        </view>
+        <view class="fd-area-list">
+            <view class="fd-area-title">
+                导演/演员列表
+            </view>
+            <view class="fd-casts">
+                <view class="fd-casts-list">
+                <view class="fd-person-item" data-id="{{filmDetail.directors[0].id}}" bindtap="viewPersonDetail">
+                    <image class="fd-person-avatar" src="{{filmDetail.directors[0].avatars.medium}}"></image>
+                    <view class="fd-person-name">{{filmDetail.directors[0].name}}</view>
+                    <view class="fd-person-role">导演</view>
+                </view>
+                <block wx:for="{{filmDetail.casts}}" wx:for-item="filmDetailCastItem" wx:key="filmDetailCastItem">
+                    <view class="fd-person-item" data-id="{{filmDetailCastItem.id}}" bindtap="viewPersonDetail">
+                        <image class="fd-person-avatar" src="{{filmDetailCastItem.avatars.medium}}"></image>
+                        <view class="fd-person-name">{{filmDetailCastItem.name}}</view>
+                        <view class="fd-person-role">演员</view>
+                    </view>
+                </block>
+                </view>
+            </view>
+        </view>
+        <!-- <block wx:if="{{comments.length>0}}">
+            <view class="fd-area-list">
+                <view class="fd-area-title">
+                    热门评论
+                </view>
+                <view class="fd-comments">
+                    <block wx:for="{{comments}}" wx:for-item="commentsItem" wx:key="commentsItem">
+                        <view class="fd-comments-list" >
+                            <image src="{{commentsItem.author.avatar}}" class="fd-comments-avatar"></image>
+                            <view class="fd-comments-detail">
+                                <view class="fd-comments-t">
+                                    <view class="name">
+                                            {{commentsItem.author.name}}
+                                    </view>
+                                    <view class="time">
+                                            {{commentsItem.created_at}}
+                                    </view>
+                                </view>
+                                <view class="fd-comments-b">
+                                    {{commentsItem.content}}
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </block> -->
+    </view>
+</block>
+</view>

@@ -1,0 +1,44 @@
+/* pages/skin/skin.wxss */
+.container{
+  padding: 20rpx;
+}
+.skin-item{
+  position: relative;
+  margin-bottom: 30rpx;
+  height: 400rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+.skin-item:last-child{
+  margin: 0;
+}
+.skin-item .skin-img{
+  width: 750rpx;
+  height: 400rpx;
+}
+.skin-item .skin-name{
+  color: #fff;
+  font-size: 32rpx;
+  position: absolute;
+  bottom: 0;
+  line-height: 68rpx;
+  background-color: rgba(71, 168, 108, .7);
+  width: 100%;
+  z-index: 2;
+  padding-left: 20rpx;
+}
+.skin-item-active {
+    border: 6rpx solid #47a86c;
+}
+.skin-item-active::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: -80rpx;
+  right: -80rpx;
+  z-index: 4;
+  width: 160rpx;
+  height: 160rpx;
+  transform: rotate(45deg);
+  background-color: #47a86c;
+}

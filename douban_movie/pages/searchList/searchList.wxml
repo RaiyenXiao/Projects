@@ -1,0 +1,8 @@
+<!--pages/searchList/searchList.wxml-->
+<import src="../../component/filmList/filmList.wxml"/>
+<block wx:if="{{isNull}}">
+    <view class='searchTip'>sorry，没有找到您要的内容，换个关键词试试吧!</view>
+</block>
+<block wx:else>
+  <template is="filmList" data="{{films: films, hasMore: hasMore, showLoading: showLoading}}"/>
+</block>

@@ -1,0 +1,13 @@
+<!--pages/skin/skin.wxml-->
+<view class='container'>
+  <block wx:if="{{skinList.length>0}}">
+    <block wx:for="{{skinList}}" wx:key="skin">
+      <view class="skin-item {{nowSkin == item.imgUrl ? 'skin-item-active' : ''}}" bindtap="chooseSkin" data-url="{{item.imgUrl}}" >
+        <image class='skin-img' src='{{item.imgUrl}}'></image>
+        <view class='skin-name'>
+          <text>{{item.title}}</text> 
+        </view>
+      </view>
+    </block>
+  </block>
+</view>

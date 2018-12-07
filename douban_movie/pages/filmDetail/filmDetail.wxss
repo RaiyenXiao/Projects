@@ -1,0 +1,120 @@
+/* pages/filmDetail/filmDetail.wxss */
+.fd-top{
+    position:relative;
+    width:100%;
+    height:600rpx;
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    overflow:hidden;
+}
+.fd-top-bg{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    height: 600rpx;
+    background-size:cover;
+    background-position:center;
+    filter:blur(30rpx);
+    transform:scale(1.2);
+    left: 0;
+    top: 0;
+}
+.fd-intro{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    padding-top: 80rpx;
+}
+.fd-intro .fd_poster{
+    width: 300rpx;
+    box-shadow:0 30rpx 150rpx rgba(255, 255, 255, .3);
+    height: 420rpx;
+}
+.fd-intro .fd-text{
+    color: #fff;
+    font-size: 28rpx;
+    width: 320rpx;
+    padding-left: 40rpx;
+    line-height: 1.5;
+}
+.fd-intro .fd-text .fd-title{
+    font-size: 40rpx;
+    font-weight: bold;
+    margin: 20rpx 0;
+}
+.fd-data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 20rpx 0;
+}
+.fd-data .fd-data-item{
+    width: 33.33%;
+    text-align: center;
+    border-left:1px solid #ddd; 
+    color: #333;
+    font-size: 32rpx;
+}
+.fd-data .fd-data-item:first-child{
+    border: none;
+}
+.fd-data .fd-data-item .fd-data-title{
+    font-size: 28rpx;
+}
+.fd-area .fd-area-list .fd-area-title{
+    margin: 40rpx 20rpx;
+    font-size: 32rpx;
+    border-left: 10rpx solid #47a86c;
+    padding-left: 20rpx; 
+}
+.fd-area .fd-area-list .fd-polt{
+    font-size: 28rpx;
+    color: #333;
+    padding: 0 40rpx;
+}
+.fd-area .fd-area-list .fd-tag,
+.fd-area .fd-area-list .fd-casts{
+    font-size: 28rpx;
+    color: #333;
+    padding: 0 40rpx;
+}
+.fd-area .fd-area-list .fd-tag-item{
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 4px 8px;
+    margin-right: 12rpx;
+}
+.fd-area .fd-area-list .fd-casts-list{
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.fd-casts .fd-person-item{
+    margin-right: 20rpx;
+}
+.fd-casts .fd-person-avatar{
+    width: 280rpx;
+    height: 400rpx;
+}
+.fd-comments{
+    font-size: 28rpx;
+    color: #333;
+    padding: 0 40rpx;
+}
+.fd-comments .fd-comments-list{
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+}
+.fd-comments .fd-comments-list .fd-comments-avatar{
+    width: 60rpx;
+    height: 60rpx;
+}
