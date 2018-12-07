@@ -80,6 +80,7 @@
     line-height: 80rpx;
     text-align: center;
     color: #ccc;
+    font-size: 28rpx;
 }
 .loading-tip image{
     width: 100rpx;
