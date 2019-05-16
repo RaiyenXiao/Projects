@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.0",
 	"appid": "wx901eb96cf658f8c7",
-	"projectname": "douban_filn",
+	"projectname": "douban_film",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -36,26 +36,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
-			"list": [
-				{
-					"id": -1,
-					"name": "我的",
-					"pathName": "pages/my/my",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "皮肤",
-					"pathName": "pages/skin/skin",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "搜索",
-					"pathName": "pages/search/search"
-				}
-			]
+			"current": -1,
+			"list": []
 		}
 	}
 }

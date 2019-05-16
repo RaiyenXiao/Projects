@@ -25,7 +25,7 @@ Page({
       showLoading: true
     })
     wx.request({
-      url: 'http://localhost/v2/movie/coming_soon',
+      url: 'http://localhost/v2/movie/coming_soon?apikey=0b2bdeda43b5688921839c8ecb20399b',
       data: {
         city: app.globalData.city,
         start: that.data.start,
@@ -98,7 +98,7 @@ Page({
       hasMore: true
     })
     wx.request({
-      url: 'http://localhost/v2/movie/coming_soon',
+      url: 'http://localhost/v2/movie/coming_soon?apikey=0b2bdeda43b5688921839c8ecb20399b',
       data: {
         city: app.globalData.city,
         start: that.data.start,

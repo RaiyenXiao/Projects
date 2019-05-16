@@ -40,7 +40,7 @@ Page({
     })
     //nginx处理 https://api.douban.com/v2/    nginx.conf中server下添加    location /v2/ { proxy_store off;proxy_set_header X - Forwarded - For $proxy_add_x_forwarded_for;proxy_set_header X - Real - IP $remote_addr;proxy_set_header Referer 'no-referrer-when-downgrade';proxy_set_header User - Agent 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36';proxy_connect_timeout 600;proxy_read_timeout 600;proxy_send_timeout 600;proxy_pass https://api.douban.com/v2/;} 重启nginx
     wx.request({
-      url: 'http://localhost/v2/movie/in_theaters',
+      url: 'http://localhost/v2/movie/in_theaters?apikey=0b2bdeda43b5688921839c8ecb20399b',
       data: {
         city: app.globalData.city,
         start: that.data.start,
@@ -113,7 +113,7 @@ Page({
       hasMore: true
     })
     wx.request({
-      url: 'http://localhost/v2/movie/in_theaters',
+      url: 'http://localhost/v2/movie/in_theaters?apikey=0b2bdeda43b5688921839c8ecb20399b',
       data: {
         city: app.globalData.city,
         start: that.data.start,

@@ -41,17 +41,19 @@ Page({
           "Content-Type": "application/xml,application/json"
         },
         success: (res) => {
-          if (res.data.subjects.length === 0) {
-            that.setData({
-              hasMore: false,
-              isNull: true
-            })
-          } else {
-            that.setData({
-              films: that.data.films.concat(res.data.subjects),
-              start: that.data.start + res.data.subjects.length,
-              showLoading: false
-            })
+          if(res.data.code == '0'){
+            if (res.data.subjects.length === 0) {
+              that.setData({
+                hasMore: false,
+                isNull: true
+              })
+            } else {
+              that.setData({
+                films: that.data.films.concat(res.data.subjects),
+                start: that.data.start + res.data.subjects.length,
+                showLoading: false
+              })
+            }
           }
           wx.hideLoading();
         }

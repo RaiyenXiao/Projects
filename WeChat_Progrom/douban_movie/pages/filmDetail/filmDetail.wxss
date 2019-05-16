@@ -71,10 +71,81 @@
     border-left: 10rpx solid #47a86c;
     padding-left: 20rpx; 
 }
-.fd-area .fd-area-list .fd-polt{
+.total-introduce{
+  height: auto;
+  font-size: 28rpx;
+  color: #333;
+  padding: 0 40rpx;
+}
+.total-introduce .merchant-desc {
+    line-height: 40rpx;
+    display: inline;
+}
+
+.total-introduce .unfold{
+  float: right;
+  color: #47a86c;
+  height: 40rpx;
+  line-height:40rpx;
+}
+.detailed-introduce{
     font-size: 28rpx;
     color: #333;
+    position: relative;
+    overflow:hidden;
     padding: 0 40rpx;
+}
+.detailed-introduce .intro-content{
+    line-height: 40rpx;
+    max-height:120rpx;
+    word-wrap: break-word;
+    /*强制打散字符*/
+    word-break: break-all;
+    background: #ffffff; 
+    color: #ffffff;
+    overflow: hidden;
+}
+.detailed-introduce .intro-content::after,
+.detailed-introduce .intro-content::before{
+    content: attr(data-title);
+        color: #333
+}
+.detailed-introduce .intro-content:before {
+        display: block;
+        overflow: hidden;
+        z-index: 12;
+        max-height: 80rpx;
+        background:#fff;
+        position: absolute;
+        left: 40rpx;
+        top: 0;
+        padding-right: 40rpx;
+      }
+.detailed-introduce .intro-content:after {
+        position: absolute;
+        left: 40rpx;
+        top: 0;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        height: 120rpx;
+        /*截取行数*/
+        -webkit-line-clamp: 3;
+        text-overflow: ellipsis;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        /*行首缩进字符数，值为[(截取行数-1)*尾部留空字符数]*/
+        text-indent: -112rpx;
+        /*尾部留空字符数*/
+        padding-right: 96rpx;/*+40)40rpx是距离右边的距离*/
+      }
+.detailed-introduce .unfold {
+    display: block;
+    z-index: 11;
+    position: absolute;
+    bottom: 0;
+    right: 40rpx;
+    color: #47a86c;
 }
 .fd-area .fd-area-list .fd-tag,
 .fd-area .fd-area-list .fd-casts{

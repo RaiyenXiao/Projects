@@ -45,8 +45,20 @@
             <view class="fd-area-title">
                 剧情介绍
             </view>
-            <view class="fd-polt">
+            <!-- <view class="fd-polt">
                 {{filmDetail.summary}}
+                <text class='spread'>展开</text>
+            </view> -->
+            <!-- <view class='total-introduce '> -->
+            <view class="{{showTotal?'total-introduce':'detailed-introduce'}}">
+              <view class='intro-content' data-title="{{filmDetail.summary}}">
+                <view class="merchant-desc">
+                    {{filmDetail.summary}}
+                </view>         
+                <view class='unfold' wx:if="{{showBtn}}" bindtap='showTotalIntro'>
+                  {{exchangeButton ? '展开' : '收起'}}
+                </view>
+              </view>
             </view>
         </view>
         <view class="fd-area-list">
