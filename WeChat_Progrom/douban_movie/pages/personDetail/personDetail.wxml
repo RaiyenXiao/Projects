@@ -27,7 +27,7 @@
             </view>
         </view>
         <view class="pd-area">
-            <view class="pd-area-list">
+            <view class="pd-area-list" wx:if="{{summary}}">
                 <view class="pd-area-title">
                     影人简介
                 </view>

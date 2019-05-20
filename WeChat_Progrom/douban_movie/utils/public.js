@@ -1,74 +1,121 @@
-function getFilmDetail(id){
-    var that = this;
-    wx.request({
-        url: 'http://localhost/v2/movie/subject/'+id+'?apikey=0b2bdeda43b5688921839c8ecb20399b',
-        method: 'GET',
-        header: {
-            "Content-Type": "application/json,application/json"
-        }, // 设置请求的 header
-        success: function(res){
-            //console.log(res)
-            that.setData({
-                filmDetail: res.data,
-                showLoading: false,
-            })
-          //简介展开数据
-          var query = wx.createSelectorQuery();
-          query.select('.merchant-desc').boundingClientRect()
-          query.exec((res) => {
-            var descHeight = res[0].height;
-            if (descHeight > 60) {
-              that.setData({
-                showBtn: true,//显示展开收起按钮
-                showTotal: false ,// 不是显示所有
-                exchangeButton: true
-              })
-            }else{
-              that.setData({
-                showBtn: false,//显示展开收起按钮
-                showTotal: true
-              })
-            }
+const wxRequest = require('wxRequest.js');
+const config = require('../config/config.js')
+//热映
+function fetchPopular (page,start,city){
+  // return fetchFilms(page, config.apiList.popular, city, start, config.count).then(res=>{
+  //   console.log(res)
+  // })
+  return fetchFilms(page, config.apiList.popular, start, config.count, city);
+}
+//待映
+function fetchComming (page,start,city){
+  return fetchFilms(page, config.apiList.coming, start, config.count,city);
+}
+function fetchTop  (page,start,city){
+  return fetchFilms(page, config.apiList.top, start, config.count,city);
+}
+//通用的电影列表获取方式
+function fetchFilms(page,url,start,count,city){
+  return new Promise((resolve, reject) =>{
+    var that = page
+    var data ={
+      apikey:config.apiKey,
+      city: city,
+      start: start,
+      count:count
+    }
+    if(that.data.hasMore){
+      wxRequest.getRequest(url,data).then(res=>{
+        if(res.data.subjects.length === 0){
+          that.setData({
+            hasMore: false,
           })
-            wx.setNavigationBarTitle({
-                title: res.data.title
+        }else{
+          that.setData({
+            films: that.data.films.concat(res.data.subjects),
+            start: that.data.start + res.data.subjects.length,
+          })
+          if(city){
+            that.setData({
+              city:city
             })
-            wx.hideLoading();
+          }
         }
+        wx.hideLoading();
+        that.setData({
+          showLoading: false
+        })
+        //resolve(res);   
+      })
+    }
+  })
+}
+function getFilmDetail(id){
+  return new Promise((resolve, reject) =>{
+    var that = this;
+    var url = config.apiList.filmDetail+id
+    var data = {
+      apikey:config.apiKey,
+    }
+    wxRequest.getRequest(url,data).then(res=>{
+      resolve(res); 
     })
-
+  })
 }
 function getPersonDetail(id){
+  return new Promise((resolve, reject) =>{
     var that = this;
-    wx.request({
-        url: 'http://localhost/v2/movie/celebrity/'+id+'?apikey=0b2bdeda43b5688921839c8ecb20399b',
-        method: 'GET',
-        header: {
-            "Content-Type": "application/json,application/json"
-        }, // 设置请求的 header
-        success: function(res){
-            //console.log(res)
-            that.setData({
-                personDetail: res.data,
-                showLoading: false,
-            })
-            //简介展开数据
-            if (res.data.summary.length >= 68) {         
-                res.data.summary = res.data.summary.substr(0, 68) + '...';
-                that.setData({
-                  summary: res.data.summary,
-                  allButton:true
-                })
-            }
-            wx.setNavigationBarTitle({
-                title: res.data.name
-            })
-            wx.hideLoading();
-        }
+    var url = config.apiList.personDetail+id
+    var data = {
+      apikey:config.apiKey,
+    }
+    wxRequest.getRequest(url,data).then(res=>{
+      resolve(res); 
     })
+  })
+}
+function search(page,type,keyword,start){
+  return new Promise((resolve, reject) =>{
+    var that = page
+    if(type == 0){
+      var url = config.apiList.search.byKeyword+keyword
+    }else{
+      var url = config.apiList.search.byTag+keyword
+    }
+    var data ={
+      apikey:config.apiKey,
+      start: start,
+      count:config.count
+    }
+    if(that.data.hasMore){
+      wxRequest.getRequest(url,data).then(res=>{
+        console.log(res)
+        if(res.data.subjects.length === 0){
+          that.setData({
+            hasMore: false,
+            isNull:true
+          })
+        }else{
+          that.setData({
+            films: that.data.films.concat(res.data.subjects),
+            start: that.data.start + res.data.subjects.length,
+          })
+        }
+        wx.hideLoading();
+        that.setData({
+          showLoading: false
+        })
+        //resolve(res); 
+      })
+    }
+  })
 }
 module.exports = {
-    getFilmDetail: getFilmDetail,
-    getPersonDetail:getPersonDetail
+  fetchPopular:fetchPopular,
+  fetchComming:fetchComming,
+  fetchTop:fetchTop,
+  getFilmDetail: getFilmDetail,
+  getPersonDetail:getPersonDetail,
+  search:search
 }
   

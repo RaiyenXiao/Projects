@@ -7,9 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    filmDetail:{},
-    showLoading:false,
-    comments:[], //影评
+    filmDetail: {},
+    showLoading: false,
+    comments: [], //影评
     showTotal: true,
     showBtn: false, //是否显示展开收起按钮
     // 显示展开还是收起
@@ -21,105 +21,64 @@ Page({
    */
   onLoad: function (options) {
     //console.log(options)
-    var that= this;
+    var that = this;
     wx.showLoading({
-      title:'正在拼命加载...',
-      mask:true
+      title: '正在拼命加载...',
+      mask: true
     })
     that.setData({
       showLoading: true
     })
     let id = options.id;
-    getFilm.getFilmDetail.call(that,id,function(data){ 
-      console.log(that.data.filmDetail)
-    });
-  //   wx.request({
-  //     url: 'http://localhost/v2/movie/subject/3168101/comments?apikey=0b2bdeda43b5688921839c8ecb20399b',
-  //     method: 'GET',
-  //     header: {
-  //         "Content-Type": "application/json,application/json"
-  //     }, // 设置请求的 header
-  //     success: function(res){
-  //         //console.log(res)
-  //         that.setData({
-  //             filmDetail: res.data.subject,
-  //             showLoading: false,
-  //             comments:res.data.comments.slice(0,3)//截取前三个评论
-  //           })
-  //         console.log(that.data.comments)
-  //         wx.setNavigationBarTitle({
-  //             title: res.data.subject.title
-  //         })
-  //         wx.hideLoading();
-  //     }
-  // })
+    return getFilm.getFilmDetail(id).then(res => {
+      //console.log(res)
+      that.setData({
+        filmDetail: res.data,
+        showLoading: false,
+      })
+      //简介展开数据
+      var query = wx.createSelectorQuery();
+      query.select('.merchant-desc').boundingClientRect()
+      query.exec((res) => {
+        var descHeight = res[0].height;
+        if (descHeight > 60) {
+          that.setData({
+            showBtn: true,//显示展开收起按钮
+            showTotal: false,// 不是显示所有
+            exchangeButton: true
+          })
+        } else {
+          that.setData({
+            showBtn: false,//显示展开收起按钮
+            showTotal: true
+          })
+        }
+      })
+      wx.setNavigationBarTitle({
+        title: res.data.title
+      })
+      wx.hideLoading();
+    })
 
   },
-  viewPersonDetail:function(e){
+  viewPersonDetail: function (e) {
     wx.navigateTo({
       url: '/pages/personDetail/personDetail?id=' + e.currentTarget.dataset.id,
     })
   },
-  showTotalIntro:function(){
+  showTotalIntro: function () {
     var that = this;
-    if (that.data.showTotal){
+    if (that.data.showTotal) {
       that.setData({
         exchangeButton: true,
         showTotal: false
       })
-    }else{
+    } else {
       that.setData({
         exchangeButton: false,
         showTotal: true
       })
     }
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    box-shadow: 0 0 40rpx #f4f4f4 inset;
+    /* box-shadow: 0 0 40rpx #f4f4f4 inset; */
 }
 
 .film-item {

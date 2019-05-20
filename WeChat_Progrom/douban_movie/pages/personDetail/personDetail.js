@@ -6,57 +6,53 @@ Page({
    * 页面的初始数据
    */
   data: {
-    personDetail:{},
-    showLoading:false,
-    allButton:false,
-    summary:"",
-    summaryAll:""
+    personDetail: {},
+    showLoading: false,
+    allButton: false,
+    summary: "",
+    summaryAll: ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that= this;
+    var that = this;
     wx.showLoading({
-      title:'正在拼命加载...',
-      mask:true
+      title: '正在拼命加载...',
+      mask: true
     })
     that.setData({
       showLoading: true
     })
     let id = options.id;
-    getPerson.getPersonDetail.call(that,id);
-    //wx.request({
-    //     url: 'http://localhost/v2/movie/celebrity/1049489?apikey=0b2bdeda43b5688921839c8ecb20399b',
-    //     method: 'GET',
-    //     header: {
-    //         "Content-Type": "application/json,application/json"
-    //     }, // 设置请求的 header
-    //     success: function(res){
-    //         //console.log(res)
-    //         that.setData({
-    //           personDetail: res.data,
-    //           showLoading: false,
-    //         })
-    //         //简介展开数据
-    //         if (res.data.summary.length >= 68) {         
-    //           res.data.summary = res.data.summary.substr(0, 68) + '...';
-    //           that.setData({
-    //             summary: res.data.summary,
-    //             allButton:true
-    //           })
-    //         }
-    //         wx.setNavigationBarTitle({
-    //             title: res.data.name
-    //         })
-    //         wx.hideLoading();
-    //         wx.stopPullDownRefresh();
-    //     }
-    // })
+    getPerson.getPersonDetail(id).then(res => {
+      //console.log(res)
+      that.setData({
+        personDetail: res.data,
+        showLoading: false,
+      })
+      //简介展开数据
+      if (res.data.summary.length >= 68) {
+        res.data.summary = res.data.summary.substr(0, 68) + '...';
+        that.setData({
+          summary: res.data.summary,
+          allButton: true
+        })
+      }else{
+        that.setData({
+          summary: res.data.summary,
+          allButton: false
+        })
+      }
+      wx.setNavigationBarTitle({
+        title: res.data.name
+      })
+      wx.hideLoading();
+    })
   },
-  summaryAll:function () {
-    var that=this;
+  summaryAll: function () {
+    var that = this;
     that.setData({
       allButton: false,
       summary: that.data.personDetail.summary

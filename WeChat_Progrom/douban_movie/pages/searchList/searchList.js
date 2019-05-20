@@ -1,4 +1,6 @@
 // pages/searchList/searchList.js
+const config = require('../../config/config.js')
+const fetch =  require('../../utils/public.js');
 var app = getApp();
 Page({
 
@@ -12,7 +14,8 @@ Page({
     start: 0,
     isNull: false,
     keyword:'',
-    url:''
+    url:'',
+    type:''
   },
 
   /**
@@ -21,73 +24,25 @@ Page({
   onLoad: function (options) {
     var that = this;
     console.log(options);
-    console.log(decodeURIComponent(options.url))
-      wx.showLoading({
-        title: '正在拼命加载...',
-        mask: true
-      })
-      that.setData({
-        showLoading: true,
-        url: decodeURIComponent(options.url) + options.keyword
-      })
-      wx.request({
-        url: that.data.url,
-        data: {
-          start: that.data.start,
-          count: 20
-        },
-        method: 'GET',
-        header: {
-          "Content-Type": "application/xml,application/json"
-        },
-        success: (res) => {
-          if(res.data.code == '0'){
-            if (res.data.subjects.length === 0) {
-              that.setData({
-                hasMore: false,
-                isNull: true
-              })
-            } else {
-              that.setData({
-                films: that.data.films.concat(res.data.subjects),
-                start: that.data.start + res.data.subjects.length,
-                showLoading: false
-              })
-            }
-          }
-          wx.hideLoading();
-        }
-      })
+    //console.log(decodeURIComponent(options.url))
+    wx.showLoading({
+      title: '正在拼命加载...',
+       mask: true
+    })
+    that.setData({
+      showLoading: true,
+      type:options.type,
+      keyword:options.keyword
+    })
+    var pages = getCurrentPages();
+    var currentPage = pages[pages.length - 1];
+    fetch.search(currentPage,that.data.type,that.data.keyword,that.data.start)
   },
   onReachBottom: function () {
     var that = this;
-    that.setData({
-      hasMore: true
-    })
-    wx.request({
-      url: that.data.url,
-      data: {
-        start: that.data.start,
-        count: 20
-      },
-      method: 'GET',
-      header: {
-        "Content-Type": "application/xml,application/json"
-      },
-      success: (res) => {
-        if (res.data.subjects.length === 0) {
-          that.setData({
-            hasMore: false,
-          })
-        } else {
-          that.setData({
-            films: that.data.films.concat(res.data.subjects),
-            start: that.data.start + res.data.subjects.length
-          })
-        }
-        wx.hideLoading();
-      }
-    })
+    var pages = getCurrentPages();
+    var currentPage = pages[pages.length - 1];
+    return fetch.search(currentPage,that.data.type,that.data.keyword,that.data.start)
   },
   //跳转电影详情
   viewFilmDetail: function (e) {

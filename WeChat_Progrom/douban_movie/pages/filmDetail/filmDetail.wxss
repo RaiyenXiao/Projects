@@ -80,6 +80,7 @@
 .total-introduce .merchant-desc {
     line-height: 40rpx;
     display: inline;
+    word-break: break-all;
 }
 
 .total-introduce .unfold{

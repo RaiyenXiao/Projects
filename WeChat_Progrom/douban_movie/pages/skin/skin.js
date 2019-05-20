@@ -1,24 +1,12 @@
 // pages/skin/skin.js
+const config = require('../../config/config.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    skinList: [
-      { title: '公路', imgUrl: '/dist/images/user_bg_1.jpg' },
-      { title: '黑夜森林', imgUrl: '/dist/images/user_bg_2.jpg' },
-      { title: '鱼与水', imgUrl: '/dist/images/user_bg_3.jpg' },
-      { title: '山之剪影', imgUrl: '/dist/images/user_bg_4.jpg' },
-      { title: '火山', imgUrl: '/dist/images/user_bg_5.jpg' },
-      { title: '科技', imgUrl: '/dist/images/user_bg_6.jpg' },
-      { title: '沙漠', imgUrl: '/dist/images/user_bg_7.jpg' },
-      { title: '叶子', imgUrl: '/dist/images/user_bg_8.jpg' },
-      { title: '早餐', imgUrl: '/dist/images/user_bg_9.jpg' },
-      { title: '英伦骑车', imgUrl: '/dist/images/user_bg_10.jpg' },
-      { title: '草原', imgUrl: '/dist/images/user_bg_11.jpg' },
-      { title: '城市', imgUrl: '/dist/images/user_bg_12.jpg' }
-    ],
+    skinList: config.skinList,
     nowSkin:''
   },
 

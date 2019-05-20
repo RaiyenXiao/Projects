@@ -1,15 +1,12 @@
 // pages/search/search.js
+const config = require('../../config/config.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    hotTag: ['动作', '喜剧', '爱情', '悬疑'],
-    search: {
-      byKeyword: 'http://localhost/v2/movie/search?q=',
-      byTag: 'http://localhost/v2/movie/search?tag='
-    }
+    hotTag: config.hotTag,
   },
 
   /**
@@ -33,7 +30,7 @@ Page({
       })
     }else{
       wx.redirectTo({
-        url: "/pages/searchList/searchList?url=" + encodeURIComponent(that.data.search.byKeyword) + "&keyword=" + keyword
+        url: "/pages/searchList/searchList?keyword=" + keyword+"&type=0"
       })
     }
   },
@@ -44,7 +41,7 @@ Page({
       //url: "/pages/searchList/searchList?url=" + that.data.search.byTag
       //测试发现传递的url参数会从？之后被截取丢掉 http://localhost/v2/movie/search?tag= 变为       http://localhost/v2/movie/search 
       //解决 利用encodeURIComponent对url进行编码
-      url: "/pages/searchList/searchList?url=" + encodeURIComponent(that.data.search.byTag)+"&keyword="+tag
+      url: "/pages/searchList/searchList?keyword=" + tag+"&type=1"
     })
   }
 })
