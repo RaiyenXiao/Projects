@@ -4,9 +4,8 @@ function wxPromise(method, url, data) {
     return new Promise(function (resolve, reject) {
         wx.request({
             url: url,
-            method: method,// OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+            method: method,
             data: data,
-            //在header中统一封装报文头，这样不用每个接口都写一样的报文头定义的代码
             header: {
                 "Content-Type": "application/xml,application/json"
             },
@@ -14,7 +13,6 @@ function wxPromise(method, url, data) {
                 setTimeout(function () {
                     wx.hideLoading();
                 }, 100);
-                //这里可以根据自己项目服务端定义的正确的返回码来进行，接口请求成功后的处理，当然也可以在这里进行报文加解密的统一处理
                 resolve(res);
             },
             fail: function (res) {
